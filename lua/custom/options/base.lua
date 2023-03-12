@@ -1,6 +1,8 @@
 -- Global settings
-vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
-vim.g.maplocalleader = " " 
+vim.g.mapleader = " "-- Make sure to set `mapleader` before lazy so your mappings are correct
+vim.g.maplocalleader = " "
+-- Fix markdown indentation settings
+vim.g.markdown_recommended_style = 0
 
 -- List & Map style settings
 local opt = vim.opt
@@ -21,14 +23,12 @@ opt.splitbelow = false -- Put new windows below current
 opt.splitright = true -- Put new windows right of current
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
+opt.hlsearch = false -- Remove highlight search on search
 
 if vim.fn.has("nvim-0.9.0") == 1 then
   opt.splitkeep = "screen"
   opt.shortmess:append { C = true }
 end
-
--- Fix markdown indentation settings
-vim.g.markdown_recommended_style = 0
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
