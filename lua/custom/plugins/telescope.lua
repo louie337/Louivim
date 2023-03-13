@@ -2,11 +2,6 @@ return {
     'nvim-telescope/telescope.nvim',
     version = '*',
     dependencies = { 'nvim-lua/plenary.nvim' },
-    pickers = {
-      find_files = {
-        theme = "tokyonight",
-      }
-    },
     config = function()
         require('telescope').setup {
           defaults = {
