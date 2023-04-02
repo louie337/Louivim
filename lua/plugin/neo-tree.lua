@@ -10,6 +10,11 @@
 -- }
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim",
+  },
   cmd = "Neotree",
   keys = {
     -- {
@@ -45,11 +50,11 @@ return {
     filesystem = {
       bind_to_cwd = false,
       follow_current_file = true,
-      filtered_items = {
-        visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
-        hide_dotfiles = false,
-        hide_gitignored = false,
-      },
+      -- filtered_items = {
+      --   visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+      --   hide_dotfiles = false,
+      --   hide_gitignored = false,
+      -- },
     },
     window = {
       mappings = {
@@ -64,5 +69,13 @@ return {
         expander_highlight = "NeoTreeExpander",
       },
     },
-  },
+    event_handlers = {
+      { event = "file_opened",
+        handler = function(file_path)
+          --auto close
+          require("neo-tree").close_all()
+        end
+      },
+    },
+  }
 }
