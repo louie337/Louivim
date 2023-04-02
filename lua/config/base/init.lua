@@ -1,5 +1,5 @@
 -- Global settings
-vim.g.mapleader = " "-- Make sure to set `mapleader` before lazy so your mappings are correct
+vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 vim.g.maplocalleader = " "
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
@@ -12,7 +12,7 @@ opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4
 opt.sidescrolloff = 8
-opt.clipboard = "unnamedplus"
+-- opt.clipboard = "unnamedplus"
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
 opt.ignorecase = true -- Ignore case
