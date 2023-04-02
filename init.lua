@@ -17,7 +17,7 @@ require("config.autocmds")
 
 require("lazy").setup({
   { import = "plugin.alpha" },
-  { import = "plugin.autoformat" },
+  -- { import = "plugin.autoformat" },
   { import = "plugin.cmp" },
   { import = "plugin.comment" },
   { import = "plugin.fugitive" },
@@ -37,7 +37,8 @@ require("lazy").setup({
   { import = 'plugin.plenary' },
   { import = 'plugin.nvim-web-devicons' },
   { import = 'plugin.nui' },
-  { import = 'plugin.neo-tree' }
+  { import = 'plugin.neo-tree' },
+  { import = 'plugin.vim-prettier' }
 })
 
 
