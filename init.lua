@@ -38,7 +38,8 @@ require("lazy").setup({
   { import = 'plugin.nvim-web-devicons' },
   { import = 'plugin.nui' },
   { import = 'plugin.neo-tree' },
-  { import = 'plugin.vim-prettier' }
+  { import = 'plugin.vim-prettier' },
+  { import = 'plugin.barbar' }
 })
 
 
