@@ -18,5 +18,7 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increa
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
--- lazy
-vim.keymap.set("n", "<leader>l", "<cmd>:Lazy<cr>", { desc = "Lazy" })
+-- Plugin menus
+vim.keymap.set("n", "<leader>Pl", "<cmd>:Lazy<cr>", { desc = "Lazy" })
+vim.keymap.set("n", "<leader>Pm", "<cmd>Mason<cr>", { desc = "Mason" })
+vim.keymap.set("n", "<leader>Pa", "<cmd>Alpha<CR>", { desc = "Alpha" })
