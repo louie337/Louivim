@@ -11,11 +11,11 @@ return {
   version = '^1.0.0', -- optional: only update when a new 1.x version is released
   keys = {
     -- Move to previous/next
-    {'<A-,>', '<Cmd>BufferPrevious<CR>', desc = "BufferPrevious", mode = "n"},
-    {'<A-.>', '<Cmd>BufferNext<CR>', desc = "BufferNext", mode = "n"},
+    {'<A-h>', '<Cmd>BufferPrevious<CR>', desc = "BufferPrevious", mode = "n"},
+    {'<A-l>', '<Cmd>BufferNext<CR>', desc = "BufferNext", mode = "n"},
     -- Re-order to previous/next
     {'<A-<>', '<Cmd>BufferMovePrevious<CR>', desc = "BufferMovePrevious", mode = "n"},
-    {'<A->>', desc = "', '", mode = "n"},
+    {'<A->>', desc = "', '", mode = "n"}, -- ???
     -- Goto buffer in position...
     {'<A-1>', '<Cmd>BufferGoto 1<CR>', desc = "BufferGoto 1", mode = "n"},
     {'<A-2>', '<Cmd>BufferGoto 2<CR>', desc = "BufferGoto 2", mode = "n"},
