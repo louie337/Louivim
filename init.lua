@@ -29,7 +29,7 @@ require("lazy").setup({
   { import = "plugin.rhubarb" },
   { import = "plugin.sleuth" },
   { import = "plugin.telescope" },
-  { import = "plugin.telescope-fzf-native" },
+  -- { import = "plugin.telescope-fzf-native" },
   { import = "plugin.theme" },
   { import = "plugin.treesitter" },
   { import = "plugin.which-key" },
@@ -41,7 +41,8 @@ require("lazy").setup({
   { import = 'plugin.vim-prettier' },
   -- { import = 'plugin.barbar' },
   { import = 'plugin.bufferline' },
-  { import = 'plugin.autopairs' }
+  { import = 'plugin.autopairs' },
+  { import = 'plugin.trouble' }
 })
 
 
