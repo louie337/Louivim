@@ -6,8 +6,8 @@ return {
   event = "VeryLazy",
   keys = {
     -- Move to previous/next
-    {'<A-h>', '<Cmd>BufferLineCyclePrev<CR>', desc = "BufferPrevious", mode = "n"},
-    {'<A-l>', '<Cmd>BufferLineCycleNext<CR>', desc = "BufferNext", mode = "n"},
+    {'<A-[>', '<Cmd>BufferLineCyclePrev<CR>', desc = "BufferPrevious", mode = "n"},
+    {'<A-]>', '<Cmd>BufferLineCycleNext<CR>', desc = "BufferNext", mode = "n"},
     -- Re-order to previous/next
     {'<A-<>', '<Cmd>BufferLineMovePrev<CR>', desc = "BufferMovePrevious", mode = "n"},
     {'<A->>', '<Cmd>BufferLineMoveNext<CR>', desc = "BufferMovePrevious", mode = "n"},
