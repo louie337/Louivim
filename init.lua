@@ -39,8 +39,9 @@ require("lazy").setup({
   -- { import = 'plugin.nui' },
   { import = 'plugin.neo-tree' },
   { import = 'plugin.vim-prettier' },
-  -- { import = 'plugin.barbar' }
+  -- { import = 'plugin.barbar' },
   { import = 'plugin.bufferline' },
+  { import = 'plugin.autopairs' }
 })
 
 
