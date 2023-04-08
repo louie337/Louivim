@@ -17,6 +17,7 @@ require("config.autocmds")
 
 require("lazy").setup({
   { import = "plugin.alpha" },
+  -- *NOTES: disable since we are now using vim-prettier for auto formatting.
   -- { import = "plugin.autoformat" },
   { import = "plugin.cmp" },
   { import = "plugin.comment" },
@@ -29,20 +30,18 @@ require("lazy").setup({
   { import = "plugin.rhubarb" },
   { import = "plugin.sleuth" },
   { import = "plugin.telescope" },
-  -- { import = "plugin.telescope-fzf-native" },
   { import = "plugin.theme" },
   { import = "plugin.treesitter" },
   { import = "plugin.which-key" },
   { import = 'plugin.nvim-lspconfig' },
-  -- { import = 'plugin.plenary' },
-  -- { import = 'plugin.nvim-web-devicons' },
-  -- { import = 'plugin.nui' },
   { import = 'plugin.neo-tree' },
   { import = 'plugin.vim-prettier' },
+  -- *NOTES: Using bufferline instead of barbar.
   -- { import = 'plugin.barbar' },
   { import = 'plugin.bufferline' },
   { import = 'plugin.autopairs' },
   { import = 'plugin.trouble' },
+  -- *NOTES: disable since we are now using vim-prettier for auto formatting.
   -- { import = 'plugin.ale'},
 })
 
