@@ -7,6 +7,7 @@ return {
       'nvim-telescope/telescope-fzf-native.nvim',
       -- NOTE: If you are having trouble with this installation,
       --       refer to the README for telescope-fzf-native for more instructions.
+      theme = "auto",
       build = 'make',
       cond = function()
         return vim.fn.executable 'make' == 1
@@ -32,14 +33,15 @@ return {
         -- See `:help telescope.builtin`
         vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = '[?] Find recently opened files' })
         vim.keymap.set('n', '<leader><space>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-        vim.keymap.set('n', '<leader>/', function()
-          -- You can pass additional configuration to telescope to change theme, layout, etc.
-          builtin.current_buffer_fuzzy_find(builtin.get_dropdown {
-            winblend = 10,
-            previewer = false,
-          })
-        end, { desc = '[/] Fuzzily search in current buffer' })
-
+        vim.keymap.set('n', '<leader>/',builtin.current_buffer_fuzzy_find
+        -- *NOTES: Kickstart.nvim setting
+        -- function()
+        --     builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+        --     winblend = 10,
+        --     previewer = false,
+        --   })
+        -- end
+        , { desc = '[/] Fuzzily search in current buffer' })
         vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
         vim.keymap.set('n', '<leader>sH', '<cmd>Telescope find_files hidden=true<CR>', { desc = '[S]earch [H]idden files' })
         vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
