@@ -47,6 +47,7 @@ local on_attach = function(_, bufnr)
     end, {
         desc = 'Format current buffer with LSP'
     })
+    nmap('<leader>f', vim.lsp.buf.format, 'LSP [F]ormat')
 end
 
 -- Enable the following language servers
@@ -145,4 +146,4 @@ cmp.setup {
 }
 
 -- ale prettier setup
-vim.g.ale_fixers = {'prettier', 'eslint', 'lua-format' }
+-- vim.g.ale_fixers = {'prettier', 'eslint', 'lua-format' }
