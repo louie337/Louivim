@@ -143,3 +143,6 @@ cmp.setup {
         name = 'luasnip'
     }}
 }
+
+-- ale prettier setup
+vim.g.ale_fixers = {'prettier', 'eslint', 'lua-format' }

@@ -42,7 +42,8 @@ require("lazy").setup({
   -- { import = 'plugin.barbar' },
   { import = 'plugin.bufferline' },
   { import = 'plugin.autopairs' },
-  { import = 'plugin.trouble' }
+  { import = 'plugin.trouble' },
+  -- { import = 'plugin.ale'},
 })
 
 
