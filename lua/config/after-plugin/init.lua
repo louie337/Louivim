@@ -91,19 +91,21 @@ mason_lspconfig.setup {
     ensure_installed = vim.tbl_keys(servers)
 }
 
-mason_lspconfig.setup_handlers {function(server_name)
+mason_lspconfig.setup_handlers { function(server_name)
     require('lspconfig')[server_name].setup {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = servers[server_name]
     }
-end}
+end }
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 
 luasnip.config.setup {}
+
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 cmp.setup {
     snippet = {
@@ -127,7 +129,7 @@ cmp.setup {
             else
                 fallback()
             end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
@@ -136,13 +138,13 @@ cmp.setup {
             else
                 fallback()
             end
-        end, {'i', 's'})
+        end, { 'i', 's' })
     },
-    sources = {{
+    sources = { {
         name = 'nvim_lsp'
     }, {
         name = 'luasnip'
-    }}
+    } }
 }
 
 -- ale prettier setup
