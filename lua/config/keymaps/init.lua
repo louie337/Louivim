@@ -22,3 +22,9 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("n", "<leader>Pl", "<cmd>:Lazy<cr>", { desc = "Lazy" })
 vim.keymap.set("n", "<leader>Pm", "<cmd>Mason<cr>", { desc = "Mason" })
 vim.keymap.set("n", "<leader>Pa", "<cmd>Alpha<CR>", { desc = "Alpha" })
+
+-- System clipboard related
+vim.keymap.set("v", "<C-y>", '"+y', { desc = "[Y]ank to system clipboard" })
+vim.keymap.set("v", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
+vim.keymap.set("n", "<C-y>", '"+y', { desc = "[Y]ank to system clipboard" })
+vim.keymap.set("n", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
