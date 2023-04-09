@@ -1,4 +1,9 @@
--- better up/down
+-- Better buffer manipulations
+vim.keymap.set("n", "<C-q>", ":q", { desc = "Close current buffer", silent = true })
+vim.keymap.set("n", "<C-w>", ":w", { desc = "Save current buffer", silent = true })
+-- NOTE: vim.keymap.set("n", "", ":nmap", { desc = "Show all current keymaps", silent = true })
+
+-- Better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
@@ -28,3 +33,6 @@ vim.keymap.set("v", "<C-y>", '"+y', { desc = "[Y]ank to system clipboard" })
 vim.keymap.set("v", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
 vim.keymap.set("n", "<C-y>", '"+y', { desc = "[Y]ank to system clipboard" })
 vim.keymap.set("n", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
+
+-- Better yanking
+vim.keymap.set("n", "yL", '^vg_y', { desc = "[Y]ank [L]ine without newline" })
