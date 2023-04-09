@@ -43,6 +43,7 @@ require("lazy").setup({
   { import = 'plugin.trouble' },
   -- *NOTES: disable since we are now using vim-prettier for auto formatting.
   -- { import = 'plugin.ale'},
+  { import = "plugin.mini-indentscope" },
 })
 
 
