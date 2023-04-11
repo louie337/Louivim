@@ -2,6 +2,8 @@ return {
   "folke/todo-comments.nvim",
   dependencies = "nvim-lua/plenary.nvim",
   lazy = false,
+  cmd = { "TodoTrouble", "TodoTelescope" },
+  event = { "BufReadPost", "BufNewFile" },
   opts = {
     keywords = {
       FIX = {
@@ -16,6 +18,7 @@ return {
       TEST = { icon = " ", color = "test", alt = { "QUESTION", "Question", "question" } },
     },
     highlight = {
+      multiline = false,
       pattern = [[.*<(KEYWORDS)(S|s|\s|:)]], -- pattern or table of patterns, used for highlighting (vim regex)
     },
     search = {
