@@ -44,7 +44,9 @@ require("lazy").setup({
   -- *NOTES: disable since we are now using vim-prettier for auto formatting.
   -- { import = 'plugin.ale'},
   { import = "plugin.mini-indentscope" },
-  { import = "plugin.todo-comments" }
+  { import = "plugin.todo-comments" },
+  { import = "plugin.git-blame" },
+  { import = 'plugin.illuminate' }
 })
 
 

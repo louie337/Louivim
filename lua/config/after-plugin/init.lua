@@ -147,5 +147,8 @@ cmp.setup {
     } }
 }
 
+-- git blame set
+vim.keymap.set('n','<leader>Pb',"<cmd>call gitblame#echo()<cr>")
+
 -- ale prettier setup
 -- vim.g.ale_fixers = {'prettier', 'eslint', 'lua-format' }
