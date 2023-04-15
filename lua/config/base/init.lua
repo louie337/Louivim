@@ -25,6 +25,8 @@ opt.splitright = true -- Put new windows right of current
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
 opt.hlsearch = false -- Remove highlight search on search
+-- opt.foldenable = false
+-- opt.foldmethod = 'indent'
 
 if vim.fn.has("nvim-0.9.0") == 1 then
   opt.splitkeep = "screen"
