@@ -42,15 +42,17 @@ return {
 
     dashboard.section.header.val = vim.split(logo, "\n")
     dashboard.section.buttons.val = {
-      dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
-      dashboard.button("h", " " .. " Find hidden files", ":Telescope find_files hidden=true<CR>"),
-      dashboard.button("n", " " .. " New file", ":ene <BAR> startinsert <CR>"),
-      dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
-      dashboard.button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
-      dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
-      dashboard.button("s", " " .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
-      dashboard.button("l", "󰒲 " .. " Lazy", ":Lazy<CR>"),
-      dashboard.button("q", " " .. " Quit", ":qa<CR>"),
+      dashboard.button("f", " " .. " [F]ind file", ":Telescope find_files <CR>"),
+      dashboard.button("h", " " .. " Find [H]idden files", ":Telescope find_files hidden=true<CR>"),
+      dashboard.button("n", " " .. " [N]ew file", ":ene <BAR> startinsert <CR>"),
+      dashboard.button("r", " " .. " [R]ecent files", ":Telescope oldfiles <CR>"),
+      dashboard.button("g", " " .. " Find [G]rep", ":Telescope live_grep <CR>"),
+      dashboard.button("l", "󰒲 " .. " [L]azygit", ":LazyGit<CR>"),
+      dashboard.button("c", "󰒲 " .. " Lazygit [C]onfig", ":LazyGitConfig<CR>"),
+      dashboard.button("C", " " .. " [C]onfig", ":e $MYVIMRC <CR>"),
+      dashboard.button("L", "󰒲 " .. " [L]azy", ":Lazy<CR>"),
+      dashboard.button("s", " " .. " Restore [S]ession", [[:lua require("persistence").load() <cr>]]),
+      dashboard.button("q", " " .. " [Q]uit", ":qa<CR>"),
     }
     for _, button in ipairs(dashboard.section.buttons.val) do
       button.opts.hl = "AlphaButtons"
