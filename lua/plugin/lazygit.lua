@@ -1,1 +1,1 @@
-return { 'kdheepak/lazygit.nvim',  config = true }
+return 'kdheepak/lazygit.nvim'

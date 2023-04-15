@@ -47,7 +47,8 @@ require("lazy").setup({
   { import = "plugin.todo-comments" },
   { import = "plugin.git-blame" },
   { import = 'plugin.illuminate' },
-  { import = 'plugin.toggleterm' }
+  { import = 'plugin.toggleterm' },
+  { import = 'plugin.lazygit' },
 })
 
 
