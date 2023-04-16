@@ -50,6 +50,7 @@ require("lazy").setup({
   { import = 'plugin.toggleterm' },
   { import = 'plugin.lazygit' },
   { import = 'plugin.nvim-ufo' },
+  { import = 'plugin.nvim-surround' },
 })
 
 
