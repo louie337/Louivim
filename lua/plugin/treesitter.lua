@@ -22,6 +22,11 @@ return {
       -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
       auto_install = false,
 
+      context_commentstring = {
+        enable = true,
+        enable_autocmd = false,
+      },
+
       highlight = { enable = true },
       indent = { enable = true, disable = { 'python' } },
       incremental_selection = {
