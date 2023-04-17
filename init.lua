@@ -51,6 +51,7 @@ require("lazy").setup({
   { import = 'plugin.lazygit' },
   { import = 'plugin.nvim-ufo' },
   { import = 'plugin.nvim-surround' },
+  { import = 'plugin.emmet-vim' }
 })
 
 
