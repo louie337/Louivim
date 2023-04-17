@@ -1,6 +1,7 @@
 return {
   'echasnovski/mini.indentscope',
   version = '*',
+  lazy = true,
   config = function()
     require('mini.indentscope').setup(
       {

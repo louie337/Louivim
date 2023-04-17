@@ -2,7 +2,7 @@
 -- vim.keymap.set("n", "<C-q>", ":q<cr>", { desc = "Close current buffer", silent = true })
 -- vim.keymap.set("n", "<C-w>", ":w<cr>", { desc = "Save current buffer", silent = true })
 -- vim.keymap.set("n", "<C-x>", ":x<cr>", { desc = "Save & close current buffer", silent = true })
--- NOTE: vim.keymap.set("n", "", ":nmap", { desc = "Show all current keymaps", silent = true })
+-- vim.keymap.set("n", "", ":nmap", { desc = "Show all current keymaps", silent = true })
 
 -- Better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
