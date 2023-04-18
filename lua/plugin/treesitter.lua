@@ -22,6 +22,9 @@ return {
       -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
       auto_install = false,
 
+      -- nvim-ts-autotag
+      autotag = { enable = true },
+
       context_commentstring = {
         enable = true,
         enable_autocmd = false,
