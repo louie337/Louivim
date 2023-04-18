@@ -26,7 +26,7 @@ return {
     {'<A-p>', '<Cmd>BufferLineTogglePin<CR>', desc = "BufferPin", mode = "n"},
     -- Close buffer
     {'<A-c>', '<Cmd>bd<CR>', desc = "BufferClose", mode = "n"},
-    {'<A-C>', '<Cmd>BufferLineGroupClose ungrouped<CR>', desc = "BufferClose", mode = "n"},
+    -- {'<A-C>', '<Cmd>BufferLineGroupClose ungrouped<CR>', desc = "BufferClose", mode = "n"},
   },
   opts = {
     options = {
