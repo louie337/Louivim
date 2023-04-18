@@ -38,3 +38,4 @@ vim.keymap.set("n", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
 
 -- Better yanking
 vim.keymap.set("n", "yL", '^vg_y', { desc = "[Y]ank [L]ine without newline" })
+vim.keymap.set("n", "dL", '^vg_d', { desc = "[D]elete [L]ine without newline" })
