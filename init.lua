@@ -35,7 +35,7 @@ require("lazy").setup({
   { import = 'plugin.neo-tree' },
   -- *NOTES: Using bufferline instead of barbar.
   -- { import = 'plugin.barbar' },
-  { import = 'plugin.bufferline' },
+  -- { import = 'plugin.bufferline' },
   { import = 'plugin.autopairs' },
   { import = 'plugin.nvim-ts-autotag' },
   { import = 'plugin.trouble' },
