@@ -10,10 +10,10 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 
 -- Better tab
 vim.keymap.set("n", "<C-t>", "<CMD>tabnew<CR>", {desc = "Create new tab"})
-vim.keymap.set("n", "<C-[>", "<CMD>tabprevious<CR>", {desc = "Go to previous tab"})
-vim.keymap.set("n", "<C-]>", "<CMD>tabnext<CR>", {desc = "Go to next tab"})
-vim.keymap.set("n", "<C-{>", "<CMD>:-tabmove<CR>", {desc = "Move tab to left"})
-vim.keymap.set("n", "<C-}>", "<CMD>:+tabmove<CR>", {desc = "Move tab to right"})
+vim.keymap.set("n", "<C-{>", "<CMD>tabprevious<CR>", {desc = "Go to previous tab"})
+vim.keymap.set("n", "<C-}>", "<CMD>tabnext<CR>", {desc = "Go to next tab"})
+vim.keymap.set("n", "<C-_>", "<CMD>:-tabmove<CR>", {desc = "Move tab to left"})
+vim.keymap.set("n", "<C-+>", "<CMD>:+tabmove<CR>", {desc = "Move tab to right"})
 
 -- Move to window using the <ctrl> hjkl keys
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
