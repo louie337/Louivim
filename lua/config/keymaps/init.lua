@@ -16,8 +16,7 @@ vim.keymap.set("n", "<leader>bl", "<CMD>buffers<CR>", {desc = "Buffer [L]ist"})
 vim.keymap.set("n", "<leader>bd", "<CMD>bdelete<CR>", {desc = "[D]elete buffer"})
 
 -- Better tab
--- Collide with tag stack keymap
-vim.keymap.set("n", "<C-T>", "<CMD>tabnew<CR>", {desc = "Create new tab"})
+vim.keymap.set("n", "<C-=>", "<CMD>tabnew<CR>", {desc = "Create new tab"})
 vim.keymap.set("n", "<C-{>", "<CMD>tabprevious<CR>", {desc = "Go to previous tab"})
 vim.keymap.set("n", "<C-}>", "<CMD>tabnext<CR>", {desc = "Go to next tab"})
 vim.keymap.set("n", "<C-_>", "<CMD>:-tabmove<CR>", {desc = "Move tab to left"})
