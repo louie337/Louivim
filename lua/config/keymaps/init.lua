@@ -8,6 +8,12 @@
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
+-- Better buffer
+vim.keymap.set("n", "<leader>bp", "<CMD>bprevious<CR>", {desc = "[P]revious buffer"})
+vim.keymap.set("n", "<leader>bn", "<CMD>bnext<CR>", {desc = "[N]ext buffer"})
+vim.keymap.set("n", "<leader>bb", "<CMD>bnext<CR>", {desc = "Next [B]uffer"})
+vim.keymap.set("n", "<leader>bd", "<CMD>bdelete<CR>", {desc = "[D]elete buffer"})
+
 -- Better tab
 vim.keymap.set("n", "<C-t>", "<CMD>tabnew<CR>", {desc = "Create new tab"})
 vim.keymap.set("n", "<C-{>", "<CMD>tabprevious<CR>", {desc = "Go to previous tab"})
