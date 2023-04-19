@@ -22,9 +22,11 @@ local on_attach = function(_, bufnr)
     nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
     nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
-    -- nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-    nmap('gd', require('telescope.builtin').lsp_definitions,'[G]oto [D]efinition')
-    nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+    nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+    -- nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+    nmap('gr', function()
+        require('telescope.builtin').lsp_references({include_declaration=false})
+    end, '[G]oto [R]eferences')
     -- nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
     nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
     nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
@@ -58,12 +60,6 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-    -- clangd = {},
-    -- gopls = {},
-    -- pyright = {},
-    -- rust_analyzer = {},
-    -- tsserver = {},
-
     lua_ls = {
         Lua = {
             workspace = {
@@ -75,9 +71,6 @@ local servers = {
         }
     }
 }
-
--- Setup neovim lua configuration
-require('neodev').setup()
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
