@@ -52,6 +52,8 @@ local on_attach = function(_, bufnr)
         desc = 'Format current buffer with LSP'
     })
     nmap('<leader>f', vim.lsp.buf.format, 'LSP [F]ormat')
+
+    require("nvim-navic").attach(_, bufnr)
 end
 
 -- Enable the following language servers

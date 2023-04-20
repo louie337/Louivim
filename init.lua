@@ -39,7 +39,7 @@ require("lazy").setup({
   { import = 'plugin.autopairs' },
   { import = 'plugin.nvim-ts-autotag' },
   { import = 'plugin.trouble' },
-  { import = 'plugin.ale'},
+  { import = 'plugin.ale' },
   { import = "plugin.mini-indentscope" },
   { import = "plugin.todo-comments" },
   { import = "plugin.git-blame" },
@@ -48,7 +48,8 @@ require("lazy").setup({
   { import = 'plugin.lazygit' },
   { import = 'plugin.nvim-ufo' },
   { import = 'plugin.nvim-surround' },
-  { import = 'plugin.emmet-vim' }
+  { import = 'plugin.emmet-vim' },
+  { import = 'plugin.nvim-navic' },
 })
 
 
