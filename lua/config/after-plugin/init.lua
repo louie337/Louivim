@@ -53,7 +53,7 @@ local on_attach = function(_, bufnr)
     })
     nmap('<leader>f', vim.lsp.buf.format, 'LSP [F]ormat')
 
-    require("nvim-navic").attach(_, bufnr)
+    -- require("nvim-navic").attach(_, bufnr)
 end
 
 -- Enable the following language servers
