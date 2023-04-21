@@ -12,6 +12,7 @@ opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4
 opt.sidescrolloff = 8
+-- NOTE: No need to share clipboard since I am using builtin system clipboard access
 -- opt.clipboard = "unnamedplus"
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
@@ -25,6 +26,7 @@ opt.splitright = true -- Put new windows right of current
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
 opt.hlsearch = false -- Remove highlight search on search
+-- NOTE: No need to modify since I am using plugin to manage the fold
 -- opt.foldenable = false
 -- opt.foldmethod = 'indent'
 
@@ -33,7 +35,6 @@ if vim.fn.has("nvim-0.9.0") == 1 then
   opt.shortmess:append { C = true }
 end
 
--- Highlight on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
     vim.highlight.on_yank()
@@ -41,3 +42,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+-- NOTE: Prevent auto commenting on newline
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
