@@ -51,6 +51,7 @@ require("lazy").setup({
   { import = 'plugin.emmet-vim' },
   { import = 'plugin.nvim-navic' },
   { import = 'plugin.text-case' },
+  { import = 'plugin.vim-smoothie' },
 })
 
 

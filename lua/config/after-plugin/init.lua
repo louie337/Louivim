@@ -25,7 +25,7 @@ local on_attach = function(_, bufnr)
     nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
     -- nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
     nmap('gr', function()
-        require('telescope.builtin').lsp_references({include_declaration=false})
+        require('telescope.builtin').lsp_references({ include_declaration = false })
     end, '[G]oto [R]eferences')
     -- nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
     nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
@@ -144,7 +144,7 @@ cmp.setup {
     } }
 }
 
--- git blame set
+-- git blame setup
 vim.keymap.set('n', '<leader>Pgb', "<cmd>call gitblame#echo()<cr>", { desc = "[P]lugin [G]it [B]lame" })
 
 -- lazygit setup
@@ -153,3 +153,7 @@ vim.keymap.set('n', '<leader>lc', "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git
 
 -- ale prettier setup
 -- vim.g.ale_fixers = {'prettier', 'eslint', 'lua-format' }
+
+-- vim-smoothie setup
+-- vim.g.smoothie_update_interval = ??
+vim.g.smoothie_base_speed = 2000
