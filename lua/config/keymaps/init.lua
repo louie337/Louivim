@@ -4,6 +4,9 @@
 -- vim.keymap.set("n", "<C-x>", ":x<cr>", { desc = "Save & close current buffer", silent = true })
 -- vim.keymap.set("n", "", ":nmap", { desc = "Show all current keymaps", silent = true })
 
+-- Set linenumber
+vim.keymap.set("n","<leader>ln","<CMD>set rnu!<CR>",{desc="Toggle line [N]number"})
+
 -- Better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
