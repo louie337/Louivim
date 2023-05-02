@@ -37,7 +37,8 @@ require("lazy").setup({
 	-- { import = 'plugin.barbar' },
 	-- { import = 'plugin.bufferline' },
 	require("plugin.autopairs" ),
-	require("plugin.nvim-ts-autotag"),
+	-- *NOTES: Buggy auto tag, can use nvim-surround to solve my problem instead
+	-- require("plugin.nvim-ts-autotag"),
 	require("plugin.trouble" ),
 	require("plugin.ale" ),
 	require("plugin.mini-indentscope" ),
