@@ -5,24 +5,24 @@
 -- vim.keymap.set("n", "", ":nmap", { desc = "Show all current keymaps", silent = true })
 
 -- Set linenumber
-vim.keymap.set("n","<leader>ln","<CMD>set rnu!<CR>",{desc="Toggle line [N]number"})
+vim.keymap.set("n", "<leader>ln", "<CMD>set rnu!<CR>", { desc = "Toggle line [N]number" })
 
 -- Better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
 -- Better buffer
-vim.keymap.set("n", "<leader>bp", "<CMD>bprevious<CR>", {desc = "[P]revious buffer"})
-vim.keymap.set("n", "<leader>bn", "<CMD>bnext<CR>", {desc = "[N]ext buffer"})
-vim.keymap.set("n", "<leader><leader>", "<CMD>b#<CR>", {desc = "Go to last buffer"})
-vim.keymap.set("n", "<leader>bd", "<CMD>bdelete<CR>", {desc = "[D]elete buffer"})
+vim.keymap.set("n", "<leader>bp", "<CMD>bprevious<CR>", { desc = "[P]revious buffer" })
+vim.keymap.set("n", "<leader>bn", "<CMD>bnext<CR>", { desc = "[N]ext buffer" })
+vim.keymap.set("n", "<leader><leader>", "<CMD>b#<CR>", { desc = "Go to last buffer" })
+vim.keymap.set("n", "<leader>bd", "<CMD>bdelete<CR>", { desc = "[D]elete buffer" })
 
 -- Better tab
-vim.keymap.set("n", "<C-=>", "<CMD>tabnew<CR>", {desc = "Create new tab"})
-vim.keymap.set("n", "<C-{>", "<CMD>tabprevious<CR>", {desc = "Go to previous tab"})
-vim.keymap.set("n", "<C-}>", "<CMD>tabnext<CR>", {desc = "Go to next tab"})
-vim.keymap.set("n", "<C-_>", "<CMD>:-tabmove<CR>", {desc = "Move tab to left"})
-vim.keymap.set("n", "<C-+>", "<CMD>:+tabmove<CR>", {desc = "Move tab to right"})
+vim.keymap.set("n", "<C-=>", "<CMD>tabnew<CR>", { desc = "Create new tab" })
+vim.keymap.set("n", "<C-{>", "<CMD>tabprevious<CR>", { desc = "Go to previous tab" })
+vim.keymap.set("n", "<C-}>", "<CMD>tabnext<CR>", { desc = "Go to next tab" })
+vim.keymap.set("n", "<C-_>", "<CMD>:-tabmove<CR>", { desc = "Move tab to left" })
+vim.keymap.set("n", "<C-+>", "<CMD>:+tabmove<CR>", { desc = "Move tab to right" })
 
 -- Move to window using the <ctrl> hjkl keys
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
@@ -55,3 +55,7 @@ vim.keymap.set("n", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
 -- Better yanking
 vim.keymap.set("n", "yL", '^vg_y', { desc = "[Y]ank [L]ine without newline" })
 vim.keymap.set("n", "dL", '^vg_d', { desc = "[D]elete [L]ine without newline" })
+
+-- Custom keymap scripts
+vim.keymap.set("n", "<leader>Cj", 'yiwiconsole.log("<ESC>ea", )<ESC>P', { desc = "[C]ustom copy with [J]avaScript" })
+vim.keymap.set("n", "<leader>Cp", 'yiwiprint("<ESC>ea", )<ESC>P', { desc = "[C]ustom copy with [P]ython" })
