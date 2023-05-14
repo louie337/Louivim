@@ -54,6 +54,7 @@ require("lazy").setup({
 	require("plugin.text-case"),
 	require("plugin.vim-smoothie"),
 	require("plugin.vim-gitgutter"),
+	require("plugin.nvim-spectre"),
 })
 
 
