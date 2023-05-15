@@ -151,6 +151,10 @@ vim.keymap.set('n', '<leader>Pgb', "<cmd>call gitblame#echo()<cr>", { desc = "[P
 vim.keymap.set('n', '<leader>lg', "<CMD>LazyGit<CR>", { desc = "[L]azy [G]it" })
 vim.keymap.set('n', '<leader>lc', "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git [C]onfig" })
 
+-- Spectre setup
+vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").open()<CR>', {
+    desc = "[S]pectre"
+})
 -- ale prettier setup
 -- vim.g.ale_fixers = {'prettier', 'eslint', 'lua-format' }
 
