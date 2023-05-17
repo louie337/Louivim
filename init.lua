@@ -55,6 +55,7 @@ require("lazy").setup({
 	require("plugin.vim-smoothie"),
 	require("plugin.vim-gitgutter"),
 	require("plugin.nvim-spectre"),
+	require("plugin.diffview"),
 })
 
 
