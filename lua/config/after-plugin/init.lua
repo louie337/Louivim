@@ -144,17 +144,33 @@ cmp.setup {
     } }
 }
 
--- git blame setup
-vim.keymap.set('n', '<leader>Pgb', "<cmd>call gitblame#echo()<cr>", { desc = "[P]lugin [G]it [B]lame" })
+-- Plugin menus
 
--- lazygit setup
-vim.keymap.set('n', '<leader>lg', "<CMD>LazyGit<CR>", { desc = "[L]azy [G]it" })
-vim.keymap.set('n', '<leader>lc', "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git [C]onfig" })
+-- git blame
+vim.keymap.set('n', '<leader>pgb', "<CMD>call gitblame#echo()<CR>", { desc = "[G]it [B]lame" })
+
+-- Lazygit
+vim.keymap.set('n', '<leader>plg', "<CMD>LazyGit<CR>", { desc = "[L]azy [G]it" })
+vim.keymap.set('n', '<leader>plc', "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git [C]onfig" })
 
 -- Spectre setup
-vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").open()<CR>', {
-    desc = "[S]pectre"
-})
+vim.keymap.set('n', '<leader>ps', '<CMD>lua require("spectre").open()<CR>', { desc = "[S]pectre" })
+
+-- Diffview setup
+vim.keymap.set('n', '<leader>pdv', "<CMD>DiffviewOpen<CR>", { desc = "[D]iff[V]iew" })
+vim.keymap.set('n', '<leader>pdf', "<CMD>DiffviewFileHistory<CR>", { desc = "[D]iff[V]iew" })
+
+-- Lazy vim
+vim.keymap.set("n", "<leader>plv", "<CMD>:Lazy<CR>", { desc = "[L]azy [V]im" })
+
+-- Mason
+vim.keymap.set("n", "<leader>pm", "<CMD>Mason<CR>", { desc = "[M]ason" })
+
+-- Alpha
+vim.keymap.set("n", "<leader>pa", "<CMD>Alpha<CR>", { desc = "[A]lpha" })
+
+-- Plugin setup
+
 -- ale prettier setup
 -- vim.g.ale_fixers = {'prettier', 'eslint', 'lua-format' }
 
