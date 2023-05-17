@@ -18,7 +18,8 @@ vim.keymap.set("n", "<leader><leader>", "<CMD>b#<CR>", { desc = "Go to last buff
 vim.keymap.set("n", "<leader>bd", "<CMD>bdelete<CR>", { desc = "[D]elete buffer" })
 
 -- Better tab
-vim.keymap.set("n", "<C-=>", "<CMD>tabnew<CR>", { desc = "Create new tab" })
+-- vim.keymap.set("n", "<C-=>", "<CMD>tabnew<CR>", { desc = "Create new tab" }) -- Create empty tab
+vim.keymap.set("n", "<C-=>", "<C-w>v<C-w>T", { desc = "Create new [T]ab" }) -- Create tab with existing buffer
 vim.keymap.set("n", "<C-{>", "<CMD>tabprevious<CR>", { desc = "Go to previous tab" })
 vim.keymap.set("n", "<C-}>", "<CMD>tabnext<CR>", { desc = "Go to next tab" })
 vim.keymap.set("n", "<C-_>", "<CMD>:-tabmove<CR>", { desc = "Move tab to left" })
