@@ -157,8 +157,8 @@ vim.keymap.set('n', '<leader>plc', "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Gi
 vim.keymap.set('n', '<leader>ps', '<CMD>lua require("spectre").open()<CR>', { desc = "[S]pectre" })
 
 -- Diffview setup
-vim.keymap.set('n', '<leader>pdv', "<CMD>DiffviewOpen<CR>", { desc = "[D]iff[V]iew" })
-vim.keymap.set('n', '<leader>pdf', "<CMD>DiffviewFileHistory<CR>", { desc = "[D]iff[V]iew" })
+vim.keymap.set('n', '<leader>pdo', "<CMD>DiffviewOpen<CR>", { desc = "[D]iffview [O]pen" })
+vim.keymap.set('n', '<leader>pdf', "<CMD>DiffviewFileHistory<CR>", { desc = "[D]iffview [F]ile History" })
 
 -- Lazy vim
 vim.keymap.set("n", "<leader>plv", "<CMD>:Lazy<CR>", { desc = "[L]azy [V]im" })
