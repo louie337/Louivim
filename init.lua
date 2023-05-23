@@ -56,6 +56,7 @@ require("lazy").setup({
 	require("plugin.vim-gitgutter"),
 	require("plugin.nvim-spectre"),
 	require("plugin.diffview"),
+	require("plugin.symbols-outline"),
 })
 
 
