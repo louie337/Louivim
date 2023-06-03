@@ -1,13 +1,4 @@
 -- *NOTES: Default minimal setup
--- return {
---   "nvim-neo-tree/neo-tree.nvim",
---   branch = "v2.x",
---   requires = {
---     "nvim-lua/plenary.nvim",
---     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
---     "MunifTanjim/nui.nvim",
---   }
--- }
 return {
   "nvim-neo-tree/neo-tree.nvim",
   dependencies = {
@@ -37,24 +28,20 @@ return {
   },
   cmd = "Neotree",
   keys = {
-    -- {
-    --   "<leader>fe",
-    --   function()
-    --     require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
-    --   end,
-    --   desc = "Explorer NeoTree (root dir)",
-    -- },
     {
       "<leader>e",
-      -- "<leader>fE",
       function()
         require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
       end,
-      desc = "Explorer NeoTree (cwd)",
+      desc = "[E]xplore NeoTree (Toggle)",
     },
-    -- { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
-    -- { "<leader>E", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
-
+    {
+      "<leader>E",
+      function()
+        require("neo-tree.command").execute({ dir = vim.loop.cwd() })
+      end,
+      desc = "[E]xplore NeoTree (Focus)",
+    }
   },
   deactivate = function()
     vim.cmd([[Neotree close]])
