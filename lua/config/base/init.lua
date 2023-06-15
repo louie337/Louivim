@@ -21,6 +21,7 @@ opt.smartcase = true -- Don't ignore case with capitals
 opt.smartindent = true -- Insert indents automatically
 opt.spell = true
 opt.spelllang = { "en" }
+opt.spelloptions = { "camel" }
 opt.splitbelow = false -- Put new windows below current
 opt.splitright = true -- Put new windows right of current
 opt.tabstop = 2 -- Number of spaces tabs count for
