@@ -58,6 +58,8 @@ require("lazy").setup({
 	require("plugin.diffview"),
 	require("plugin.symbols-outline"),
 	require("plugin.nvim-colorizer"),
+	-- TODO: Add color picker
+	-- require("plugin.color-picker"),
 })
 
 
