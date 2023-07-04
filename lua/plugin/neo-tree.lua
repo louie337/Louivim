@@ -18,7 +18,6 @@ return {
             bo = {
               -- if the file type is one of following, the window will be ignored
               filetype = { 'neo-tree', "neo-tree-popup", "notify" },
-
               -- if the buffer type is one of following, the window will be ignored
               buftype = { 'terminal', "quickfix" },
             },
@@ -91,6 +90,15 @@ return {
       --     require('neo-tree.filter')
       --   end
       -- },
+      -- NOTE: Add relative line number
+      {
+        event = "neo_tree_buffer_enter",
+        handler = function(arg)
+          vim.cmd [[
+          setlocal relativenumber
+        ]]
+        end,
+      }
     },
   }
 }
