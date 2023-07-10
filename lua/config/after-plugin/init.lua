@@ -1,4 +1,5 @@
 -- print("after plugins")
+
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -152,23 +153,6 @@ cmp.setup {
     } }
 }
 
--- which-key setup
-local wk = require("which-key")
-wk.register({
-    ["<leader>b"] = { name = "+[B]uffer" },
-    ["<leader>C"] = { name = "+[C]ustom" },
-    ["<leader>c"] = { name = "+[C]ode action" },
-    ["<leader>d"] = { name = "+[D]ocument" },
-    ["<leader>h"] = { name = "+[G]it Gutter " },
-    ["<leader>l"] = { name = "+[L]ine number" },
-    ["<leader>r"] = { name = "+[R]ename " },
-    ["<leader>w"] = { name = "+[W]orkspace" },
-    ["<leader>x"] = { name = "+[T]rouble" },
-    ["<leader>p"] = { name = "+[P]lugin" },
-    ["<leader>s"] = { name = "+[S]earch" },
-})
-
-
 -- Plugin menus
 
 -- git blame
@@ -202,3 +186,21 @@ vim.keymap.set("n", "<leader>pa", "<CMD>Alpha<CR>", { desc = "[A]lpha" })
 -- vim-smoothie setup
 -- vim.g.smoothie_update_interval = ??
 vim.g.smoothie_base_speed = 2000
+
+-- which-key setup
+local wk = require("which-key")
+wk.register({
+    ["<leader>b"] = { name = "+[B]uffer" },
+    ["<leader>C"] = { name = "+[C]ustom" },
+    ["<leader>c"] = { name = "+[C]ode action" },
+    ["<leader>d"] = { name = "+[D]ocument" },
+    ["<leader>h"] = { name = "+[G]it Gutter " },
+    ["<leader>l"] = { name = "+[L]ine number" },
+    ["<leader>r"] = { name = "+[R]ename " },
+    ["<leader>w"] = { name = "+[W]orkspace" },
+    ["<leader>x"] = { name = "+[T]rouble" },
+    ["<leader>p"] = { name = "+[P]lugin" },
+    ["<leader>s"] = { name = "+[S]earch" },
+})
+
+
