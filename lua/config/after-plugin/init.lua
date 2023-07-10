@@ -201,6 +201,8 @@ wk.register({
     ["<leader>x"] = { name = "+[T]rouble" },
     ["<leader>p"] = { name = "+[P]lugin" },
     ["<leader>s"] = { name = "+[S]earch" },
-})
-
+}, { mode = "n" })
+wk.register({
+    ["<leader>K"] = { name = "+[C]hange Case" },
+}, { mode = "v" })
 
