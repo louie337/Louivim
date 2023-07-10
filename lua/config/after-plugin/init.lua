@@ -152,6 +152,23 @@ cmp.setup {
     } }
 }
 
+-- which-key setup
+local wk = require("which-key")
+wk.register({
+    ["<leader>b"] = { name = "+[B]uffer" },
+    ["<leader>C"] = { name = "+[C]ustom" },
+    ["<leader>c"] = { name = "+[C]ode action" },
+    ["<leader>d"] = { name = "+[D]ocument" },
+    ["<leader>h"] = { name = "+[G]it Gutter " },
+    ["<leader>l"] = { name = "+[L]ine number" },
+    ["<leader>r"] = { name = "+[R]ename " },
+    ["<leader>w"] = { name = "+[W]orkspace" },
+    ["<leader>x"] = { name = "+[T]rouble" },
+    ["<leader>p"] = { name = "+[P]lugin" },
+    ["<leader>s"] = { name = "+[S]earch" },
+})
+
+
 -- Plugin menus
 
 -- git blame
