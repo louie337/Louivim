@@ -166,8 +166,13 @@ vim.keymap.set('n', '<leader>plc', "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Gi
 vim.keymap.set('n', '<leader>ps', '<CMD>lua require("spectre").open()<CR>', { desc = "[S]pectre" })
 
 -- Diffview setup
-vim.keymap.set('n', '<leader>pdo', "<CMD>DiffviewOpen<CR>", { desc = "[D]iffview [O]pen" })
-vim.keymap.set('n', '<leader>pdf', "<CMD>DiffviewFileHistory<CR>", { desc = "[D]iffview [F]ile History" })
+vim.keymap.set('n', '<leader>pdo', "<CMD>DiffviewOpen origin/main<CR>", { desc = "[O]pen" })
+vim.keymap.set('n', '<leader>pdf', "<CMD>DiffviewFileHistory %<CR>", { desc = "[F]ile History" })
+vim.keymap.set('n', '<leader>pdc', "<CMD>DiffviewClose<CR>", { desc = "[C]lose" })
+vim.keymap.set('n', '<leader>pdF', "<CMD>DiffviewToggleFiles<CR>", { desc = "[T]oggle Files" })
+vim.keymap.set('n', '<leader>pdF', "<CMD>DiffviewFocusFiles<CR>", { desc = "[F]ocus Files" })
+vim.keymap.set('n', '<leader>pdr', "<CMD>DiffviewRefresh<CR>", { desc = "[R]efresh" })
+vim.keymap.set('n', '<leader>pdl', "<CMD>DiffviewLog<CR>", { desc = "[L]og" })
 
 -- Lazy vim
 vim.keymap.set("n", "<leader>plv", "<CMD>:Lazy<CR>", { desc = "[L]azy [V]im" })
@@ -200,6 +205,9 @@ wk.register({
     ["<leader>w"] = { name = "+[W]orkspace" },
     ["<leader>x"] = { name = "+[T]rouble" },
     ["<leader>p"] = { name = "+[P]lugin" },
+    ["<leader>pd"] = { name = "+[D]iffview" },
+    ["<leader>pg"] = { name = "+[G]it" },
+    ["<leader>pl"] = { name = "+[L]azy git" },
     ["<leader>s"] = { name = "+[S]earch" },
 }, { mode = "n" })
 wk.register({
