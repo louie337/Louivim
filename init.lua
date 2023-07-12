@@ -22,7 +22,6 @@ require("lazy").setup({
 	require("plugin.fugitive"),
 	require("plugin.gitsigns" ),
 	require("plugin.indent-blankline" ),
-	require("plugin.lualine" ),
 	require("plugin.mason" ),
 	require("plugin.neodev"),
 	require("plugin.rhubarb"),
@@ -33,12 +32,7 @@ require("lazy").setup({
 	require("plugin.which-key" ),
 	require("plugin.nvim-lspconfig" ),
 	require("plugin.neo-tree" ),
-	-- *NOTES: Using bufferline instead of barbar.
-	-- { import = 'plugin.barbar' },
-	-- { import = 'plugin.bufferline' },
 	require("plugin.autopairs" ),
-	-- *NOTES: Buggy auto tag, can use nvim-surround to solve my problem instead
-	-- require("plugin.nvim-ts-autotag"),
 	require("plugin.trouble" ),
 	require("plugin.ale" ),
 	require("plugin.mini-indentscope" ),
@@ -51,6 +45,7 @@ require("lazy").setup({
 	require("plugin.nvim-surround" ),
 	require("plugin.emmet-vim"),
 	require("plugin.nvim-navic" ),
+	require("plugin.lualine" ),
 	require("plugin.text-case"),
 	require("plugin.vim-smoothie"),
 	require("plugin.vim-gitgutter"),
@@ -60,6 +55,10 @@ require("lazy").setup({
 	require("plugin.nvim-colorizer"),
 	-- TODO: Add color picker
 	-- require("plugin.color-picker"),
+	-- NOTE: Achieved plugins
+	-- { import = 'plugin.barbar' },
+	-- { import = 'plugin.bufferline' },
+	-- require("plugin.nvim-ts-autotag"),
 })
 
 
