@@ -3,16 +3,10 @@ return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
-    'kevinhwang91/nvim-ufo',
   },
   build = ':TSUpdate',
   config = function()
     pcall(require('nvim-treesitter.install').update { with_sync = true })
-    require('ufo').setup({
-      provider_selector = function(bufnr, filetype, buftype)
-        return { 'treesitter', 'indent' }
-      end
-    })
     require('nvim-treesitter.configs').setup {
       -- Add languages to be installed here that you want installed for treesitter
       -- ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'help', 'vim' },
