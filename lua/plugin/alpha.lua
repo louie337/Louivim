@@ -43,7 +43,7 @@ return {
     dashboard.section.header.val = vim.split(logo, "\n")
     dashboard.section.buttons.val = {
       dashboard.button("f", " " .. " [F]ind file", ":Telescope find_files <CR>"),
-      dashboard.button("h", " " .. " Find [H]idden files", ":Telescope find_files hidden=true<CR>"),
+      dashboard.button("h", " " .. " Find [H]idden files", ":Telescope find_files hidden=true no_ignore=true<CR>"),
       dashboard.button("e", " " .. " [E]xplore files",":Neotree reveal<CR>"),
       dashboard.button("r", " " .. " [R]ecent files", ":Telescope oldfiles <CR>"),
       dashboard.button("g", " " .. " Find [G]rep", ":Telescope live_grep <CR>"),
