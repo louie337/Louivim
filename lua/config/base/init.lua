@@ -47,3 +47,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- NOTE: Prevent auto commenting on newline
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+
+-- NOTE: Add mdx file type support
+vim.filetype.add({
+  extension = {
+    mdx = 'mdx'
+  }
+})

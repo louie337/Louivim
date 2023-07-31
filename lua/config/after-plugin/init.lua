@@ -155,6 +155,9 @@ cmp.setup {
     } }
 }
 
+-- treesitter 
+vim.treesitter.language.register('markdown', 'mdx')
+
 -- Plugin menus
 
 -- git blame
