@@ -25,6 +25,7 @@ opt.spelloptions = { "camel" }
 opt.splitbelow = false -- Put new windows below current
 opt.splitright = true -- Put new windows right of current
 opt.tabstop = 2 -- Number of spaces tabs count for
+opt.shiftwidth = 2 -- Fix shiftwidth 8 issue
 opt.termguicolors = true -- True color support
 opt.hlsearch = false -- Remove highlight search on search
 -- NOTE: No need to modify since I am using plugin to manage the fold
