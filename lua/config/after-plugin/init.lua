@@ -20,19 +20,20 @@ local on_attach = function(client, bufnr)
         })
     end
 
+    local telescope = require('telescope.builtin')
     nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
     nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
-    nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-    -- nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+    -- nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+    nmap('gd', telescope.lsp_definitions, '[G]oto [D]efinition')
     nmap('gr', function()
-        require('telescope.builtin').lsp_references({ include_declaration = false })
+        telescope.lsp_references({ include_declaration = false })
     end, '[G]oto [R]eferences')
     -- nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-    nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+    nmap('gI', telescope.lsp_implementations, '[G]oto [I]mplementation')
     nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
-    nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-    nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+    nmap('<leader>ds', telescope.lsp_document_symbols, '[D]ocument [S]ymbols')
+    nmap('<leader>ws', telescope.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
     -- See `:help K` for why this keymap
     nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
