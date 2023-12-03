@@ -81,15 +81,13 @@ return {
       },
     },
     event_handlers = {
-      -- NOTE: disable auto close
-      -- {
-      --   event = "file_opened",
-      --   handler = function(file_path)
-      --     --auto close
-      --     vim.cmd([[Neotree close]])
-      --     require('neo-tree.filter')
-      --   end
-      -- },
+      -- NOTE: Enable auto close
+      {
+        event = "file_opened",
+        handler = function()
+          vim.cmd([[Neotree close]])
+        end
+      },
       -- NOTE: Add relative line number
       {
         event = "neo_tree_buffer_enter",
