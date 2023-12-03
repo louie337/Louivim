@@ -38,7 +38,6 @@ return {
     local builtin = require('telescope.builtin')
     -- See `:help telescope.builtin`
     vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = '[?] Find recently opened files' })
-    vim.keymap.set('n', '<leader>bl', builtin.buffers, { desc = '[L]ist of buffers' })
     vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find
     -- *NOTES: Kickstart.nvim setting
     -- function()
@@ -57,6 +56,11 @@ return {
     vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
     vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
     vim.keymap.set('n', '<leader>ss', builtin.spell_suggest, { desc = '[S]earch [S]pell Suggestions' })
+    vim.keymap.set('n', '<leader>sj', builtin.jumplist, { desc = '[S]earch [J]ump list' })
+    vim.keymap.set('n', '<leader>st', builtin.tagstack, { desc = '[S]earch [T]agstack' })
+    vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[S]earch [B]uffers' })
+    vim.keymap.set('n', '<leader>sm', builtin.marks, { desc = '[S]earch [M]arks' })
+    vim.keymap.set('n', '<leader>sq', builtin.quickfix, { desc = '[S]earch [Q]uickfix' })
     -- NOTE: Lazygit integration
     require("telescope").load_extension("lazygit")
     vim.keymap.set('n', '<leader>sl', require('telescope').extensions.lazygit.lazygit,
