@@ -20,11 +20,11 @@ vim.keymap.set("n", "<leader>bD", "<CMD>%bd|e#|bd#<CR>", { desc = "[D]elete all 
 
 -- Better tab
 -- vim.keymap.set("n", "<C-=>", "<CMD>tabnew<CR>", { desc = "Create new tab" }) -- Create empty tab
-vim.keymap.set("n", "<C-=>", "<C-w>v<C-w>T", { desc = "Create new [T]ab" }) -- Create tab with existing buffer
-vim.keymap.set("n", "<C-{>", "<CMD>tabprevious<CR>", { desc = "Go to previous tab" })
-vim.keymap.set("n", "<C-}>", "<CMD>tabnext<CR>", { desc = "Go to next tab" })
-vim.keymap.set("n", "<C-_>", "<CMD>:-tabmove<CR>", { desc = "Move tab to left" })
-vim.keymap.set("n", "<C-+>", "<CMD>:+tabmove<CR>", { desc = "Move tab to right" })
+vim.keymap.set("n", "<C-w>t", "<C-w>v<C-w>T", { desc = "Create new [T]ab" }) -- Create tab with existing buffer
+vim.keymap.set("n", "<C-w>[", "<CMD>tabprevious<CR>", { desc = "Go to previous tab" })
+vim.keymap.set("n", "<C-w>]", "<CMD>tabnext<CR>", { desc = "Go to next tab" })
+vim.keymap.set("n", "<C-w>{", "<CMD>:-tabmove<CR>", { desc = "Move tab to left" })
+vim.keymap.set("n", "<C-w>}", "<CMD>:+tabmove<CR>", { desc = "Move tab to right" })
 vim.keymap.set("n", "<C-w>Q", "<CMD>tabclose<CR>", { desc = "[Q]uit current tab" })
 
 -- Move to window using the <ctrl> hjkl keys
