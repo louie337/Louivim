@@ -32,7 +32,7 @@ require("lazy").setup({
 	require("plugin.which-key" ),
 	require("plugin.nvim-lspconfig" ),
 	require("plugin.neo-tree" ),
-	require("plugin.autopairs" ),
+	-- require("plugin.autopairs" ),
 	require("plugin.trouble" ),
 	require("plugin.ale" ),
 	require("plugin.mini-indentscope" ),
