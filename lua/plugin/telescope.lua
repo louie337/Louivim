@@ -59,8 +59,7 @@ return {
     vim.keymap.set('n', '<leader>ss', builtin.spell_suggest, { desc = '[S]earch [S]pell Suggestions' })
     vim.keymap.set('n', '<leader>sJ', builtin.jumplist, { desc = '[S]earch [J]ump list' })
     vim.keymap.set('n', '<leader>sj', function()
-      print(require("telescope.utils").buffer_dir())
-      builtin.jumplist({ initial_mode = "normal", default_text = utils.buffer_dir() })
+      builtin.jumplist({ initial_mode = "normal", default_text = vim.fn.getcwd() })
     end
     , { desc = '[S]earch [J]ump list in current directory' })
     vim.keymap.set('n', '<leader>st', builtin.tagstack, { desc = '[S]earch [T]agstack' })
