@@ -48,9 +48,9 @@ require("lazy").setup({
 	require("plugin.lualine" ),
 	require("plugin.text-case"),
 	require("plugin.vim-smoothie"),
-	require("plugin.vim-gitgutter"),
+	-- require("plugin.vim-gitgutter"),
 	require("plugin.nvim-spectre"),
-	require("plugin.diffview"),
+	require("plugin.diffview"), -- The plugin to view git difference
 	require("plugin.symbols-outline"),
 	require("plugin.nvim-colorizer"),
 	-- TODO: Add color picker
