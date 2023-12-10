@@ -9,7 +9,7 @@ return {
       FIX = {
         icon = " ",
         color = "error",
-        alt = { "IMPORTANT", "Important", "important" },
+        alt = { "IMPORTANT", "Important", "important", "BUG" },
       },
       TODO = { icon = " ", color = "info", alt = { "Todo", "todo" } },
       WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },

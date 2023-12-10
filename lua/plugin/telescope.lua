@@ -32,7 +32,7 @@ return {
           "^.git/",
           ".next"
         },
-      },
+      }
     }
     -- NOTE: Keymap settings
     local builtin = require('telescope.builtin')
