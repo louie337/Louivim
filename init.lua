@@ -61,7 +61,7 @@ require("lazy").setup({
 	-- { import = 'plugin.barbar' },
 	-- { import = 'plugin.bufferline' },
 	-- require("plugin.nvim-ts-autotag"),
-	change_detection = { enabled = true, notify = false }
+}, {
 })
 
 
