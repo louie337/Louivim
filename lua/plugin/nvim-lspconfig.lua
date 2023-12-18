@@ -7,7 +7,6 @@ return {
         -- NOTE `opts = {}` is the same as calling `require('fidget').setup({})`
         {
             'j-hui/fidget.nvim',
-            version = 'legacy'
         }, -- Additional lua configuration, makes nvim stuff amazing!
         'folke/neodev.nvim'
     }
