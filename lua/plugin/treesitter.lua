@@ -3,6 +3,7 @@ return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
+    'HiPhish/nvim-ts-rainbow2'
   },
   build = ':TSUpdate',
   config = function()
@@ -14,6 +15,12 @@ return {
 
       -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
       auto_install = false,
+
+      -- rainbow = {
+      --   enable = true,
+      --   query = "rainbow-parens",
+      --   strategy = require("ts-rainbow").strategy.global,
+      -- },
 
       -- nvim-ts-autotag
       autotag = { enable = true },
