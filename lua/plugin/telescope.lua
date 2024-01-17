@@ -57,8 +57,8 @@ return {
     vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
     vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
     vim.keymap.set('n', '<leader>ss', builtin.spell_suggest, { desc = '[S]earch [S]pell Suggestions' })
-    vim.keymap.set('n', '<leader>sJ', builtin.jumplist, { desc = '[S]earch [J]ump list' })
-    vim.keymap.set('n', '<leader>sj', function()
+    vim.keymap.set('n', '<leader>sj', builtin.jumplist, { desc = '[S]earch [J]ump list' })
+    vim.keymap.set('n', '<leader>sJ', function()
       builtin.jumplist({ initial_mode = "normal", default_text = vim.fn.getcwd() })
     end
     , { desc = '[S]earch [J]ump list in current directory' })
