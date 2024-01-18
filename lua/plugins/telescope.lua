@@ -20,7 +20,7 @@ return {
   },
   config = function()
     require('telescope').setup {
-      defaults = {
+      fefaults = {
         mappings = {
           i = {
             ['<C-u>'] = false,
@@ -39,15 +39,7 @@ return {
     local utils = require('telescope.utils')
     -- See `:help telescope.builtin`
     vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = '[?] Find recently opened files' })
-    vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find
-    -- *NOTES: Kickstart.nvim setting
-    -- function()
-    --     builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    --     winblend = 10,
-    --     previewer = false,
-    --   })
-    -- end
-    , { desc = '[/] Fuzzily search in current buffer' })
+    vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find, { desc = '[/] Fuzzily search in current buffer' })
     vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
     vim.keymap.set('n', '<leader>sh', '<CMD>Telescope find_files hidden=true no_ignore=true<CR>',
       { desc = '[S]earch [H]idden files' })
@@ -66,9 +58,5 @@ return {
     vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[S]earch [B]uffers' })
     vim.keymap.set('n', '<leader>sm', builtin.marks, { desc = '[S]earch [M]arks' })
     vim.keymap.set('n', '<leader>sq', builtin.quickfix, { desc = '[S]earch [Q]uickfix' })
-    -- NOTE: Lazygit integration
-    require("telescope").load_extension("lazygit")
-    vim.keymap.set('n', '<leader>sl', require('telescope').extensions.lazygit.lazygit,
-      { desc = '[S]earch [L]azygit' })
   end
 }
