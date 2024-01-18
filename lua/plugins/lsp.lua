@@ -1,6 +1,6 @@
-return {
+return { {
+  -- NOTES: LSP Server Manager
   "williamboman/mason.nvim",
-  cmd = "Mason",
   -- opts = {
   --   ensure_installed = {
   --     "stylua",
@@ -51,4 +51,14 @@ return {
   --     end
   --   end
   -- end,
-}
+}, {
+  -- NOTES: Useful status updates for LSP
+  'williamboman/mason-lspconfig.nvim',
+  dependencies = {
+    'j-hui/fidget.nvim',
+    'folke/neodev.nvim'
+  },
+}, {
+  -- NOTE: LSP Configuration & Plugins
+  'neovim/nvim-lspconfig',
+} }
