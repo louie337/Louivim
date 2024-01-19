@@ -4,23 +4,12 @@ return {
   dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
     "windwp/nvim-ts-autotag",
-    "HiPhish/nvim-ts-rainbow2",
   },
   build = ":TSUpdate",
   config = function()
     pcall(require("nvim-treesitter.install").update({ with_sync = true }))
     require("nvim-treesitter.configs").setup({
       -- NOTES: Plugins
-      -- HiPhish/nvim-ts-rainbow2
-      rainbow = {
-        enable = true,
-        -- list of languages you want to disable the plugin for
-        disable = { "cpp" },
-        -- Which query to use for finding delimiters
-        query = "rainbow-parens",
-        -- Highlight the entire buffer all at once
-        strategy = require("ts-rainbow").strategy.global,
-      },
 
       -- windwp/nvim-ts-autotag
       autotag = { enable = true },
