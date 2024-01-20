@@ -88,19 +88,23 @@ capabilities.textDocument.foldingRange = {
     lineFoldingOnly = true,
 }
 
--- Setup mason so it can manage external tooling
-require("mason").setup()
-
 -- Ensure the servers above are installed
+local mason= require("mason")
 local mason_lspconfig = require("mason-lspconfig")
+local lspconfig = require("lspconfig")
 
+-- Setup mason so it can manage external tooling
+mason.setup()
+
+-- Setup mason_lspconfig so it install all servers from Mason(?)
 mason_lspconfig.setup({
     ensure_installed = vim.tbl_keys(servers),
 })
 
+-- Setup handlers using mason_lspconfig together with lspconfig
 mason_lspconfig.setup_handlers({
     function(server_name)
-        require("lspconfig")[server_name].setup({
+        lspconfig[server_name].setup({
             capabilities = capabilities,
             on_attach = on_attach,
             settings = servers[server_name],
