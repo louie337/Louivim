@@ -11,9 +11,10 @@ return {
             return utils.root_has_file({ ".prettierrc" })
           end,
           prefer_local = "node_modules/.bin",
+          extra_filetypes = { "mdx" },
         }),
-        null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.code_actions.eslint,
+        null_ls.builtins.diagnostics.eslint_d,
+        null_ls.builtins.code_actions.eslint_d,
       },
     })
   end,
