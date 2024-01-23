@@ -171,23 +171,23 @@ vim.treesitter.language.register("markdown", "mdx")
 vim.keymap.set("n", "<leader>pgb", "<CMD>call gitblame#echo()<CR>", { desc = "[G]it [B]lame" })
 
 -- Lazygit
-vim.keymap.set("n", "<leader>plg", "<CMD>LazyGit<CR>", { desc = "[L]azy [G]it" })
-vim.keymap.set("n", "<leader>plc", "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git [C]onfig" })
+vim.keymap.set("n", "<leader>lg", "<CMD>LazyGit<CR>", { desc = "[L]azy [G]it" })
+vim.keymap.set("n", "<leader>lc", "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git [C]onfig" })
 
 -- Spectre setup
-vim.keymap.set("n", "<leader>ps", '<CMD>lua require("spectre").open()<CR>', { desc = "[S]pectre" })
+vim.keymap.set("n", "<leader>sr", '<CMD>lua require("spectre").open()<CR>', { desc = "[S]earch & [R]eplace" })
 
 -- Diffview setup
-vim.keymap.set("n", "<leader>pdo", "<CMD>DiffviewOpen origin/main<CR>", { desc = "[O]pen" })
-vim.keymap.set("n", "<leader>pdf", "<CMD>DiffviewFileHistory %<CR>", { desc = "[F]ile History" })
-vim.keymap.set("n", "<leader>pdc", "<CMD>DiffviewClose<CR>", { desc = "[C]lose" })
-vim.keymap.set("n", "<leader>pdF", "<CMD>DiffviewToggleFiles<CR>", { desc = "[T]oggle Files" })
-vim.keymap.set("n", "<leader>pdF", "<CMD>DiffviewFocusFiles<CR>", { desc = "[F]ocus Files" })
-vim.keymap.set("n", "<leader>pdr", "<CMD>DiffviewRefresh<CR>", { desc = "[R]efresh" })
-vim.keymap.set("n", "<leader>pdl", "<CMD>DiffviewLog<CR>", { desc = "[L]og" })
+vim.keymap.set("n", "<leader>do", "<CMD>DiffviewOpen origin/main<CR>", { desc = "[D]iffview [O]pen" })
+vim.keymap.set("n", "<leader>dh", "<CMD>DiffviewFileHistory %<CR>", { desc = "[D]iffview [H]istory" })
+vim.keymap.set("n", "<leader>dc", "<CMD>DiffviewClose<CR>", { desc = "[D]iffview [C]lose" })
+vim.keymap.set("n", "<leader>dt", "<CMD>DiffviewToggleFiles<CR>", { desc = "[D]iffview [T]oggle Files" })
+vim.keymap.set("n", "<leader>df", "<CMD>DiffviewFocusFiles<CR>", { desc = "[D]iffview [F]ocus Files" })
+vim.keymap.set("n", "<leader>dr", "<CMD>DiffviewRefresh<CR>", { desc = "[D]iffview [R]efresh" })
+vim.keymap.set("n", "<leader>dl", "<CMD>DiffviewLog<CR>", { desc = "[D]iffview [L]og" })
 
 -- Lazy vim
-vim.keymap.set("n", "<leader>plv", "<CMD>:Lazy<CR>", { desc = "[L]azy [V]im" })
+vim.keymap.set("n", "<leader>lv", "<CMD>:Lazy<CR>", { desc = "[L]azy [V]im" })
 
 -- Mason
 vim.keymap.set("n", "<leader>pm", "<CMD>Mason<CR>", { desc = "[M]ason" })
@@ -207,16 +207,11 @@ wk.register({
     ["<leader>b"] = { name = "+[B]uffer" },
     ["<leader>C"] = { name = "+[C]ustom" },
     ["<leader>c"] = { name = "+[C]ode action" },
-    ["<leader>d"] = { name = "+[D]ocument" },
-    ["<leader>h"] = { name = "+[G]it Gutter " },
-    ["<leader>l"] = { name = "+[L]ine number" },
+    ["<leader>d"] = { name = "+[D]ocument/ [D]iffvew" },
     ["<leader>r"] = { name = "+[R]ename " },
     ["<leader>w"] = { name = "+[W]orkspace" },
     ["<leader>x"] = { name = "+[T]rouble" },
     ["<leader>p"] = { name = "+[P]lugin" },
-    ["<leader>pd"] = { name = "+[D]iffview" },
-    ["<leader>pg"] = { name = "+[G]it" },
-    ["<leader>pl"] = { name = "+[L]azy git" },
     ["<leader>s"] = { name = "+[S]earch" },
 }, { mode = "n" })
 wk.register({

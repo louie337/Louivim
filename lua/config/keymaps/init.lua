@@ -5,7 +5,7 @@
 -- vim.keymap.set("n", "", ":nmap", { desc = "Show all current keymaps", silent = true })
 
 -- Set linenumber
-vim.keymap.set("n", "<leader>ln", "<CMD>set rnu!<CR>", { desc = "Toggle line [N]number" })
+vim.keymap.set("n", "<leader>ln", "<CMD>set rnu!<CR>", { desc = "[L]ine [N]number" })
 
 -- Better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
