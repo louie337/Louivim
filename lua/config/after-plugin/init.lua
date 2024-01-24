@@ -31,7 +31,6 @@ local on_attach = function(client, bufnr)
     end, "[G]oto [R]eferences")
     -- nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
     nmap("gI", telescope.lsp_implementations, "[G]oto [I]mplementation")
-    nmap("<leader>D", vim.lsp.buf.type_definition, "Type [D]efinition")
     nmap("<leader>ds", telescope.lsp_document_symbols, "[D]ocument [S]ymbols")
     nmap("<leader>ws", telescope.lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
 
