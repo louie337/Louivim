@@ -81,12 +81,6 @@ local servers = {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
--- nvim-ufo setup
-capabilities.textDocument.foldingRange = {
-    dynamicRegistration = false,
-    lineFoldingOnly = true,
-}
-
 -- Ensure the servers above are installed
 local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
@@ -110,8 +104,6 @@ mason_lspconfig.setup_handlers({
         })
     end,
 })
-
-require("ufo").setup()
 
 -- nvim-cmp setup
 local cmp = require("cmp")
