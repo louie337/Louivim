@@ -161,9 +161,6 @@ vim.treesitter.language.register("markdown", "mdx")
 
 -- Plugin menus
 
--- git blame
-vim.keymap.set("n", "<leader>pgb", "<CMD>call gitblame#echo()<CR>", { desc = "[G]it [B]lame" })
-
 -- Lazygit
 vim.keymap.set("n", "<leader>lg", "<CMD>LazyGit<CR>", { desc = "[L]azy [G]it" })
 vim.keymap.set("n", "<leader>lc", "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git [C]onfig" })
