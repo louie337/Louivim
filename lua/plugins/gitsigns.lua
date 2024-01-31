@@ -1,13 +1,15 @@
-return { -- Adds git releated signs to the gutter, as well as utilities for managing changes
-    'lewis6991/gitsigns.nvim',
-    opts = {
-      -- See `:help gitsigns.txt`
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
+local icons = require("options.icons")
+
+return {
+  "lewis6991/gitsigns.nvim",
+  opts = {
+    signs = {
+      add = { text = icons.git.added },
+      change = { text = icons.git.modified },
+      delete = { text = icons.git.removed },
+      topdelete = { text = icons.git.remove },
+      changedelete = { text = icons.git.remove },
     },
-  }
+    current_line_blame = true,
+  },
+}

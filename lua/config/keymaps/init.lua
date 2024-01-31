@@ -46,9 +46,26 @@ vim.keymap.set("v", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
 vim.keymap.set("n", "<C-y>", '"+y', { desc = "[Y]ank to system clipboard" })
 vim.keymap.set("n", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
 
+-- Gitsigns
+vim.keymap.set("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "[G]itsigns [P]review hunk" })
+vim.keymap.set(
+	"n",
+	"]c",
+	"&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'",
+	{ expr = true },
+	{ desc = "[G]itsigns next hunk" }
+)
+vim.keymap.set(
+	"n",
+	"[c",
+	"&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'",
+	{ expr = true },
+	{ desc = "[G]itsigns previous hunk" }
+)
+
 -- Better yanking
-vim.keymap.set("n", "yL", '^vg_y', { desc = "[Y]ank [L]ine without newline" })
-vim.keymap.set("n", "dL", '^vg_d', { desc = "[D]elete [L]ine without newline" })
+vim.keymap.set("n", "yL", "^vg_y", { desc = "[Y]ank [L]ine without newline" })
+vim.keymap.set("n", "dL", "^vg_d", { desc = "[D]elete [L]ine without newline" })
 
 -- Custom keymap scripts
 vim.keymap.set("n", "<leader>Cj", 'yiwiconsole.log("<ESC>ea", )<ESC>P', { desc = "[C]ustom copy with [J]avaScript" })
