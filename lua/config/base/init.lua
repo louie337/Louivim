@@ -35,15 +35,15 @@ opt.hlsearch = false     -- Remove highlight search on search
 
 if vim.fn.has("nvim-0.9.0") == 1 then
   opt.splitkeep = "screen"
-  opt.shortmess:append { C = true }
+  opt.shortmess:append({ C = true })
 end
 
-vim.api.nvim_create_autocmd('TextYankPost', {
+vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
     vim.highlight.on_yank()
   end,
   group = highlight_group,
-  pattern = '*',
+  pattern = "*",
 })
 
 -- NOTE: Prevent auto commenting on newline
@@ -53,6 +53,18 @@ vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 -- NOTE: Add mdx file type support
 vim.filetype.add({
   extension = {
-    mdx = 'mdx'
-  }
+    mdx = "mdx",
+  },
 })
+
+local icons = require("options.icons")
+local signs = {
+  Error = icons.diagnostics.Error,
+  Warn = icons.diagnostics.Warn,
+  Hint = icons.diagnostics.Hint,
+  Info = icons.diagnostics.Info,
+}
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
