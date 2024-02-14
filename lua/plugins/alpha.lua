@@ -4,6 +4,7 @@ return {
   opts = function()
     local dashboard = require("alpha.themes.dashboard")
     local logo = [[
+
                                                                    ,&@@@&%,
                                                                 @@            @@/,
                                                           &..&@(      *@          @//
@@ -33,11 +34,11 @@ return {
                                   ,@                  &&/,
 
 
-                          █░█ ▄▀█ █▀█ █▀█ █ █▄░█ █▀▀ █▀ █▀   █ █▀   
-                          █▀█ █▀█ █▀▀ █▀▀ █ █░▀█ ██▄ ▄█ ▄█   █ ▄█   
+                            █ █ ▄▀█ █▀█ █▀█ █ █▄ █ █▀▀ █▀ █▀   █ █▀   
+                            █▀█ █▀█ █▀▀ █▀▀ █ █ ▀█ ██▄ ▄█ ▄█   █ ▄█   
 
-                        ▄▀█   █░█░█ ▄▀█ █▀█ █▀▄▀█   █▀█ █░█ █▀█ █▀█ █▄█
-                        █▀█   ▀▄▀▄▀ █▀█ █▀▄ █░▀░█   █▀▀ █▄█ █▀▀ █▀▀ ░█░
+                        ▄▀█   █ █ █ ▄▀█ █▀█ █▀▄▀█   █▀█ █ █ █▀█ █▀█ █▄█
+                        █▀█   ▀▄▀▄▀ █▀█ █▀▄ █ ▀ █   █▀▀ █▄█ █▀▀ █▀▀  █
 ]]
 
     dashboard.section.header.val = vim.split(logo, "\n")
@@ -46,8 +47,8 @@ return {
       dashboard.button("g", "󱡴 " .. " Grep", ":Telescope live_grep <CR>"),
       dashboard.button("r", " " .. " Recent", ":Telescope oldfiles <CR>"),
       dashboard.button("R", " " .. " Restore", [[:lua require("persistence").load() <cr>]]),
-      dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
-      dashboard.button("C", "󰒲 " .. " Lazygit Config", ":LazyGitConfig<CR>"),
+      -- dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
+      -- dashboard.button("C", "󰒲 " .. " Lazygit Config", ":LazyGitConfig<CR>"),
       dashboard.button("q", " " .. " Quit", ":qa<CR>"),
     }
     for _, button in ipairs(dashboard.section.buttons.val) do
