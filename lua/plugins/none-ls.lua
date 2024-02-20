@@ -10,9 +10,6 @@ return {
 
         -- NOTES: Prettier settings
         null_ls.builtins.formatting.prettierd.with({
-          condition = function(utils)
-            return utils.root_has_file_matches("prettierrc")
-          end,
           prefer_local = "node_modules/.bin",
           extra_filetypes = { "mdx" },
         }),
