@@ -45,10 +45,10 @@ return {
     dashboard.section.buttons.val = {
       dashboard.button("f", "󰍉 " .. " Find", ":Telescope find_files <CR>"),
       dashboard.button("g", "󱡴 " .. " Grep", ":Telescope live_grep <CR>"),
-      dashboard.button("r", " " .. " Recent", ":Telescope oldfiles <CR>"),
+      -- dashboard.button("r", " " .. " Recent", ":Telescope oldfiles <CR>"),
       dashboard.button("R", " " .. " Restore", [[:lua require("persistence").load() <cr>]]),
       -- dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
-      -- dashboard.button("C", "󰒲 " .. " Lazygit Config", ":LazyGitConfig<CR>"),
+      dashboard.button("L", "󰒲 " .. " LazyVim", ":Lazy<CR>"),
       dashboard.button("q", " " .. " Quit", ":qa<CR>"),
     }
     for _, button in ipairs(dashboard.section.buttons.val) do
