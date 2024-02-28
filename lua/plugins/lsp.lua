@@ -10,6 +10,9 @@ return {
       "j-hui/fidget.nvim",
       "folke/neodev.nvim",
     },
+    opts = {
+      auto_install = true,
+    },
   },
   {
     -- NOTE: LSP Configuration & Plugins
