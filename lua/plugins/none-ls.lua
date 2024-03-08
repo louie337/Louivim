@@ -32,7 +32,7 @@ return {
         }),
 
         -- NOTES: Cspell settings
-        null_ls.builtins.completion.spell.with({
+        null_ls.builtins.diagnostics.codespell.with({
           diagnostics_postprocess = function(diagnostic)
             diagnostic.severity = vim.diagnostic.severity.HINT
           end,
