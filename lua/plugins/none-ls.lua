@@ -8,16 +8,16 @@ return {
 
     null_ls.setup({
       sources = {
-        -- NOTES: Lua settings
+        -- NOTE: Lua settings
         null_ls.builtins.formatting.stylua,
 
-        -- NOTES: Prettier settings
+        -- NOTE: Prettier settings
         null_ls.builtins.formatting.prettier.with({
           only_local = "node_modules/.bin",
           extra_filetypes = { "mdx" },
         }),
 
-        -- NOTES: Eslnit settings
+        -- NOTE: Eslnit settings
         require("none-ls.diagnostics.eslint_d").with({
           condition = function(utils)
             return utils.root_has_file_matches("eslintrc")
@@ -31,12 +31,15 @@ return {
           only_local = "node_modules/.bin",
         }),
 
-        -- NOTES: Cspell settings
+        -- NOTE: Cspell settings
         null_ls.builtins.diagnostics.codespell.with({
           diagnostics_postprocess = function(diagnostic)
             diagnostic.severity = vim.diagnostic.severity.HINT
           end,
         }),
+
+        -- NOTE: hover show word's definition
+        null_ls.builtins.hover.dictionary
       },
     })
   end,
