@@ -31,7 +31,8 @@ return {
         file_ignore_patterns = {
           ".node_modules/",
           ".git/",
-          ".next/"
+          ".next/",
+          ".lock"
         },
       },
     })
