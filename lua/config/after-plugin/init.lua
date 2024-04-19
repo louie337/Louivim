@@ -169,13 +169,13 @@ vim.keymap.set("n", "<leader>lc", "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git
 vim.keymap.set("n", "<leader>sr", '<CMD>lua require("spectre").open()<CR>', { desc = "[S]earch & [R]eplace" })
 
 -- Diffview setup
-vim.keymap.set("n", "<leader>do", "<CMD>DiffviewOpen origin/main<CR>", { desc = "[D]iffview [O]pen" })
+vim.keymap.set("n", "<leader>do", "<CMD>DiffviewOpen<CR>", { desc = "[D]iffview [O]pen" })
 vim.keymap.set("n", "<leader>dh", "<CMD>DiffviewFileHistory %<CR>", { desc = "[D]iffview [H]istory" })
 vim.keymap.set("n", "<leader>dc", "<CMD>DiffviewClose<CR>", { desc = "[D]iffview [C]lose" })
 vim.keymap.set("n", "<leader>dt", "<CMD>DiffviewToggleFiles<CR>", { desc = "[D]iffview [T]oggle Files" })
 vim.keymap.set("n", "<leader>df", "<CMD>DiffviewFocusFiles<CR>", { desc = "[D]iffview [F]ocus Files" })
 vim.keymap.set("n", "<leader>dr", "<CMD>DiffviewRefresh<CR>", { desc = "[D]iffview [R]efresh" })
-vim.keymap.set("n", "<leader>dl", "<CMD>DiffviewLog<CR>", { desc = "[D]iffview [L]og" })
+vim.keymap.set("v", "<leader>dr", "<Esc><CMD>'<,'>DiffviewFileHistory --follow<CR>", { desc = "[D]iffview [R]ange" })
 
 -- Lazy vim
 vim.keymap.set("n", "<leader>lv", "<CMD>:Lazy<CR>", { desc = "[L]azy [V]im" })
