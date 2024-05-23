@@ -169,7 +169,7 @@ vim.keymap.set("n", "<leader>lc", "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git
 vim.keymap.set("n", "<leader>sr", '<CMD>lua require("spectre").open()<CR>', { desc = "[S]earch & [R]eplace" })
 
 -- Diffview setup
-vim.keymap.set("n", "<leader>do", "<CMD>DiffviewOpen<CR>", { desc = "[D]iffview [O]pen" })
+vim.keymap.set("n", "<leader>do", "<CMD>DiffviewOpen origin/HEAD..HEAD<CR>", { desc = "[D]iffview [O]pen" })
 vim.keymap.set("n", "<leader>dh", "<CMD>DiffviewFileHistory %<CR>", { desc = "[D]iffview [H]istory" })
 vim.keymap.set("n", "<leader>dc", "<CMD>DiffviewClose<CR>", { desc = "[D]iffview [C]lose" })
 vim.keymap.set("n", "<leader>dt", "<CMD>DiffviewToggleFiles<CR>", { desc = "[D]iffview [T]oggle Files" })
