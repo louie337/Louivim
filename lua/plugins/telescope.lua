@@ -32,7 +32,7 @@ return {
           ".node_modules/",
           ".git/",
           ".next/",
-          ".lock"
+          ".lock",
         },
       },
     })
@@ -80,7 +80,9 @@ return {
       builtin.jumplist({ initial_mode = "normal", default_text = vim.fn.getcwd() })
     end, { desc = "[S]earch [J]ump list in current directory" })
     vim.keymap.set("n", "<leader>st", builtin.tagstack, { desc = "[S]earch [T]agstack" })
-    vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "[S]earch [B]uffers" })
+    vim.keymap.set("n", "<leader>sb", function()
+      builtin.buffers({ sort_lastused = true })
+    end, { desc = "[S]earch [B]uffers" })
     vim.keymap.set("n", "<leader>sm", builtin.marks, { desc = "[S]earch [M]arks" })
     vim.keymap.set("n", "<leader>sq", builtin.quickfix, { desc = "[S]earch [Q]uickfix" })
   end,
