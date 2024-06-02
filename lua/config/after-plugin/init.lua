@@ -201,7 +201,7 @@ wk.register({
     ["<leader>d"] = { name = "+[D]ocument/ [D]iffvew" },
     ["<leader>r"] = { name = "+[R]ename " },
     ["<leader>w"] = { name = "+[W]orkspace" },
-    ["<leader>x"] = { name = "+[T]rouble" },
+    ["<leader>x"] = { name = "+Trouble [X]" },
     ["<leader>p"] = { name = "+[P]lugin" },
     ["<leader>s"] = { name = "+[S]earch" },
 }, { mode = "n" })
