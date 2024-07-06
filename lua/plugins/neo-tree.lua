@@ -1,4 +1,4 @@
--- *NOTES: Default minimal setup
+-- *NOTES: Defauxt minimal setup
 return {
   "nvim-neo-tree/neo-tree.nvim",
   dependencies = {
@@ -7,32 +7,32 @@ return {
     "MunifTanjim/nui.nvim",
     {
       -- only needed if you want to use the commands with "_with_window_picker" suffix
-      's1n7ax/nvim-window-picker',
+      "s1n7ax/nvim-window-picker",
       version = "2.*",
       config = function()
-        require 'window-picker'.setup({
+        require("window-picker").setup({
           autoselect_one = true,
           include_current = false,
           filter_rules = {
             -- filter using buffer options
             bo = {
               -- if the file type is one of following, the window will be ignored
-              filetype = { 'neo-tree', "neo-tree-popup", "notify" },
+              filetype = { "neo-tree", "neo-tree-popup", "notify" },
               -- if the buffer type is one of following, the window will be ignored
-              buftype = { 'terminal', "quickfix" },
+              buftype = { "terminal", "quickfix" },
             },
           },
-          other_win_hl_color = '#e35e4f',
+          other_win_hl_color = "#e35e4f",
         })
       end,
-    }
+    },
   },
   cmd = "Neotree",
   keys = {
     {
       "<leader>e",
       function()
-        require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+        require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd(), position = "right" })
       end,
       desc = "[E]xplore NeoTree (Toggle)",
     },
@@ -42,7 +42,7 @@ return {
         require("neo-tree.command").execute({ dir = vim.loop.cwd() })
       end,
       desc = "[E]xplore NeoTree (Focus)",
-    }
+    },
   },
   deactivate = function()
     vim.cmd([[Neotree close]])
@@ -86,17 +86,17 @@ return {
         event = "file_opened",
         handler = function()
           vim.cmd([[Neotree close]])
-        end
+        end,
       },
       -- NOTE: Add relative line number
       {
         event = "neo_tree_buffer_enter",
         handler = function(arg)
-          vim.cmd [[
+          vim.cmd([[
           setlocal relativenumber
-        ]]
+        ]])
         end,
-      }
+      },
     },
-  }
+  },
 }
