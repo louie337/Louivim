@@ -41,12 +41,6 @@ vim.keymap.set("n", "<C-q>", "<C-w>q", { desc = "[Q]uit current window" })
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
--- System clipboard related
-vim.keymap.set("v", "<C-y>", '"+y', { desc = "[Y]ank to system clipboard" })
-vim.keymap.set("v", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
-vim.keymap.set("n", "<C-y>", '"+y', { desc = "[Y]ank to system clipboard" })
-vim.keymap.set("n", "<C-p>", '"+p', { desc = "[P]aste to system clipboard" })
-
 -- Gitsigns
 vim.keymap.set("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "[G]itsigns [P]review hunk" })
 vim.keymap.set(
