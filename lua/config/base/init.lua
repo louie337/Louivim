@@ -16,7 +16,7 @@ opt.sidescrolloff = 8
 -- NOTE: No need to share clipboard since I am using builtin system clipboard access
 -- opt.clipboard = "unnamedplus"
 opt.confirm = true     -- Confirm to save changes before exiting modified buffer
-opt.cursorline = true  -- Enable highlighting of the current line
+opt.cursorline = false  -- Enable highlighting of the current line
 opt.ignorecase = true  -- Ignore case
 opt.smartcase = true   -- Don't ignore case with capitals
 opt.smartindent = true -- Insert indents automatically
