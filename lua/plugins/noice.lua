@@ -1,6 +1,11 @@
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
+  keys = {
+    { "<leader>nd", "<CMD>NoiceDismiss<CR>",   desc = "[N]oice [D]ismiss" },
+    { "<leader>nh", "<CMD>NoiceHistory<CR>",   desc = "[N]oice [H]istory" },
+    { "<leader>nt", "<CMD>NoiceTelescope<CR>", desc = "[N]oice [T]elescope" },
+  },
   opts = {
     -- add any options here
     cmdline = {
