@@ -14,7 +14,7 @@ return {
       TODO = { icon = " ", color = "info" },
       WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
       PERF = { icon = " ", alt = { "COMMENT" } },
-      NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+      NOTE = { icon = " ", color = "hint", alt = { "INFO", "MARK" } },
       TEST = { icon = " ", color = "test", alt = { "QUESTION" } },
     },
     highlight = {
