@@ -69,5 +69,5 @@ vim.keymap.set("n", "yL", "^vg_y", { desc = "[Y]ank [L]ine without newline" })
 vim.keymap.set("n", "dL", "^vg_d", { desc = "[D]elete [L]ine without newline" })
 
 -- Custom keymap scripts
-vim.keymap.set("n", "<leader>Cj", 'yiwiconsole.log("<ESC>ea", )<ESC>P', { desc = "[C]ustom copy with [J]avaScript" })
-vim.keymap.set("n", "<leader>Cp", 'yiwiprint("<ESC>ea", )<ESC>P', { desc = "[C]ustom copy with [P]ython" })
+vim.keymap.set("n", "<leader>Cj", 'yiwiconsole.log("\\n", "<ESC>ea", )<ESC>Pa, "\\n"', { desc = "[C]ustom copy with [J]avaScript" })
+vim.keymap.set("n", "<leader>Cp", 'yiwiprint("\\n", "<ESC>ea", )<ESC>Pa, "\\n"', { desc = "[C]ustom copy with [P]ython" })
