@@ -7,6 +7,7 @@
 -- Base setup
 vim.keymap.set("n", "<leader>ln", "<CMD>set rnu!<CR>", { desc = "[L]ine [N]number" })
 vim.keymap.set("n", "<leader>nl", "<CMD>nohl<CR>", { desc = "[N]o High[L]ight" })
+vim.keymap.set("n", "<leader>pt", "<CMD>set paste!<CR>", { desc = "[P]aste [T]oggle" })
 
 -- Better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
