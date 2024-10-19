@@ -194,17 +194,17 @@ vim.g.smoothie_base_speed = 2000
 
 -- which-key setup
 local wk = require("which-key")
-wk.register({
-    ["<leader>b"] = { name = "+[B]uffer" },
-    ["<leader>C"] = { name = "+[C]ustom" },
-    ["<leader>c"] = { name = "+[C]ode action" },
-    ["<leader>d"] = { name = "+[D]ocument/ [D]iffvew" },
-    ["<leader>r"] = { name = "+[R]ename " },
-    ["<leader>w"] = { name = "+[W]orkspace" },
-    ["<leader>x"] = { name = "+Trouble [X]" },
-    ["<leader>p"] = { name = "+[P]lugin" },
-    ["<leader>s"] = { name = "+[S]earch" },
+wk.add({
+    { "<leader>b", group = "+[B]uffer" },
+    { "<leader>C", group = "+[C]ustom" },
+    { "<leader>c", group = "+[C]ode action" },
+    { "<leader>d", group = "+[D]ocument/ [D]iffvew" },
+    { "<leader>r", group = "+[R]ename " },
+    { "<leader>w", group = "+[W]orkspace" },
+    { "<leader>x", group = "+Trouble [X]" },
+    { "<leader>p", group = "+[P]lugin" },
+    { "<leader>s", group = "+[S]earch" },
 }, { mode = "n" })
-wk.register({
-    ["<leader>K"] = { name = "+[C]hange Case" },
+wk.add({
+    { "<leader>K", group = "+[C]hange Case" },
 }, { mode = "v" })
