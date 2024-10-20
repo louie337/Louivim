@@ -108,11 +108,20 @@ mason_lspconfig.setup_handlers({
 -- nvim-cmp setup
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local lspkind = require("lspkind")
 
 luasnip.config.setup({})
 require("luasnip.loaders.from_vscode").lazy_load()
 
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
+
+local has_words_before = function()
+    if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
+        return false
+    end
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
+end
 
 cmp.setup({
     snippet = {
@@ -131,15 +140,13 @@ cmp.setup({
         ["<CR>"] = cmp.mapping.confirm({
             select = true,
         }),
-        ["<Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-                cmp.select_next_item({ count = 2 })
-            elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
+        ["<Tab>"] = vim.schedule_wrap(function(fallback)
+            if cmp.visible() and has_words_before() then
+                cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
             else
                 fallback()
             end
-        end, { "i", "s" }),
+        end),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item({ count = 2 })
@@ -151,8 +158,18 @@ cmp.setup({
         end, { "i", "s" }),
     }),
     sources = {
+        { name = "copilot", group_index = 2 },
         { name = "nvim_lsp" },
         { name = "luasnip" },
+    },
+    formatting = {
+        format = lspkind.cmp_format({
+            mode = "symbol_text",
+            max_width = 50,
+            symbol_map = {
+                Copilot = "",
+            },
+        }),
     },
 })
 
@@ -162,8 +179,8 @@ vim.treesitter.language.register("markdown", "mdx")
 -- Plugin menus
 
 -- Lazygit
-vim.keymap.set("n", "<leader>lg", "<CMD>LazyGit<CR>", { desc = "[L]azy [G]it" })
-vim.keymap.set("n", "<leader>lc", "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git [C]onfig" })
+vim.keymap.set("n", "<leader>lzg", "<CMD>LazyGit<CR>", { desc = "[L]a[Z]y [G]it" })
+vim.keymap.set("n", "<leader>lzc", "<CMD>LazyGitConfig<CR>", { desc = "[L]a[Z]y Git [C]onfig" })
 
 -- Spectre setup
 vim.keymap.set("n", "<leader>sr", '<CMD>lua require("spectre").open()<CR>', { desc = "[S]earch & [R]eplace" })
@@ -194,17 +211,18 @@ vim.g.smoothie_base_speed = 2000
 
 -- which-key setup
 local wk = require("which-key")
-wk.register({
-    ["<leader>b"] = { name = "+[B]uffer" },
-    ["<leader>C"] = { name = "+[C]ustom" },
-    ["<leader>c"] = { name = "+[C]ode action" },
-    ["<leader>d"] = { name = "+[D]ocument/ [D]iffvew" },
-    ["<leader>r"] = { name = "+[R]ename " },
-    ["<leader>w"] = { name = "+[W]orkspace" },
-    ["<leader>x"] = { name = "+Trouble [X]" },
-    ["<leader>p"] = { name = "+[P]lugin" },
-    ["<leader>s"] = { name = "+[S]earch" },
-}, { mode = "n" })
-wk.register({
-    ["<leader>K"] = { name = "+[C]hange Case" },
-}, { mode = "v" })
+local modes = { "n", "v", "i", "s" }
+wk.add({
+    { "<leader>a", group = "+[A]vante", mode = modes, icon = "" },
+    { "<leader>b", group = "+[B]uffer", mode = modes },
+    { "<leader>C", group = "+[C]opilot Chat", mode = modes, icon = "" },
+    { "<leader>c", group = "+[C]ode/ [Copilot]", mode = modes, icon = "" },
+    { "<leader>d", group = "+[D]ocument/ [D]iffvew", mode = modes },
+    { "<leader>r", group = "+[R]ename ", mode = modes },
+    { "<leader>w", group = "+[W]orkspace", mode = modes },
+    { "<leader>x", group = "+Trouble [X]", mode = modes },
+    { "<leader>p", group = "+[P]rint", mode = modes },
+    { "<leader>s", group = "+[S]earch", mode = modes },
+    { "<leader>K", group = "+[C]ase Change", mode = modes },
+    { "<leader>g", group = "+[G]ptPrompt", mode = modes, icon = "" },
+})
