@@ -57,6 +57,12 @@ return {
     )
     vim.keymap.set(
       "n",
+      "<leader>si",
+      "<CMD>Telescope find_files no_ignore=true<CR>",
+      { desc = "[S]earch [I]gnored files" }
+    )
+    vim.keymap.set(
+      "n",
       "<leader>sH",
       "<CMD>Telescope live_grep hidden=true search=<CR>",
       { desc = "[S]earch by [G]rep (Hidden files)" }
