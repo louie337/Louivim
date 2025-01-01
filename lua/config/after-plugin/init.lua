@@ -162,8 +162,8 @@ vim.treesitter.language.register("markdown", "mdx")
 -- Plugin menus
 
 -- Lazygit
-vim.keymap.set("n", "<leader>lg", "<CMD>LazyGit<CR>", { desc = "[L]azy [G]it" })
-vim.keymap.set("n", "<leader>lc", "<CMD>LazyGitConfig<CR>", { desc = "[L]azy Git [C]onfig" })
+vim.keymap.set("n", "<leader>lzg", "<CMD>LazyGit<CR>", { desc = "[L]a[Z]y [G]it" })
+vim.keymap.set("n", "<leader>lzc", "<CMD>LazyGitConfig<CR>", { desc = "[L]a[Z]y Git [C]onfig" })
 
 -- Spectre setup
 vim.keymap.set("n", "<leader>sr", '<CMD>lua require("spectre").open()<CR>', { desc = "[S]earch & [R]eplace" })
