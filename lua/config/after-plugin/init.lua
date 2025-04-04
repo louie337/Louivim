@@ -195,6 +195,7 @@ vim.g.smoothie_base_speed = 2000
 -- which-key setup
 local wk = require("which-key")
 wk.add({
+    { "<leader>a", group = "+[A]vante" },
     { "<leader>b", group = "+[B]uffer" },
     { "<leader>C", group = "+[C]ustom" },
     { "<leader>c", group = "+[C]ode action" },
