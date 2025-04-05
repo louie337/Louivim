@@ -211,18 +211,18 @@ vim.g.smoothie_base_speed = 2000
 
 -- which-key setup
 local wk = require("which-key")
+local modes = { "n", "v", "i", "s" }
 wk.add({
-    { "<leader>a", group = "+[A]vante" },
-    { "<leader>b", group = "+[B]uffer" },
-    { "<leader>C", group = "+[C]ustom" },
-    { "<leader>c", group = "+[C]ode action" },
-    { "<leader>d", group = "+[D]ocument/ [D]iffvew" },
-    { "<leader>r", group = "+[R]ename " },
-    { "<leader>w", group = "+[W]orkspace" },
-    { "<leader>x", group = "+Trouble [X]" },
-    { "<leader>p", group = "+[P]lugin" },
-    { "<leader>s", group = "+[S]earch" },
-}, { mode = "n" })
-wk.add({
-    { "<leader>K", group = "+[C]hange Case" },
-}, { mode = "v" })
+    { "<leader>a", group = "+[A]vante", mode = modes, icon = "" },
+    { "<leader>b", group = "+[B]uffer", mode = modes },
+    { "<leader>C", group = "+[C]opilot Chat", mode = modes, icon = "" },
+    { "<leader>c", group = "+[C]ode/ [Copilot]", mode = modes, icon = "" },
+    { "<leader>d", group = "+[D]ocument/ [D]iffvew", mode = modes },
+    { "<leader>r", group = "+[R]ename ", mode = modes },
+    { "<leader>w", group = "+[W]orkspace", mode = modes },
+    { "<leader>x", group = "+Trouble [X]", mode = modes },
+    { "<leader>p", group = "+[P]rint", mode = modes },
+    { "<leader>s", group = "+[S]earch", mode = modes },
+    { "<leader>K", group = "+[C]ase Change", mode = modes },
+    { "<leader>g", group = "+[G]ptPrompt", mode = modes, icon = "" },
+})
