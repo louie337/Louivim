@@ -63,8 +63,9 @@ vim.keymap.set("n", "yL", "^vg_y", { desc = "[Y]ank [L]ine without newline" })
 vim.keymap.set("n", "dL", "^vg_d", { desc = "[D]elete [L]ine without newline" })
 
 -- Custom keymap scripts
-vim.keymap.set("n", "<leader>Cj", 'yiwiconsole.log("<ESC>ea", )<ESC>P', { desc = "[C]ustom copy with [J]avaScript" })
-vim.keymap.set("n", "<leader>Cp", 'yiwiprint("<ESC>ea", )<ESC>P', { desc = "[C]ustom copy with [P]ython" })
+vim.keymap.set("v", "<leader>pj", [["zy:lua vim.api.nvim_buf_set_text(0, vim.fn.line("'<") - 1, vim.fn.col("'<") - 1, vim.fn.line("'>") - 1, vim.fn.col("'>"), {'console.log("' .. vim.fn.getreg('z') .. '", ' .. vim.fn.getreg('z') .. ')'})<CR>]], { desc = "[C]ustom copy with [J]avaScript" })
+vim.keymap.set("v", "<leader>pp", [["zy:lua vim.api.nvim_buf_set_text(0, vim.fn.line("'<") - 1, vim.fn.col("'<") - 1, vim.fn.line("'>") - 1, vim.fn.col("'>"), {'print("' .. vim.fn.getreg('z') .. '", ' .. vim.fn.getreg('z') .. ')'})<CR>]], { desc = "[C]ustom copy with [P]ython" })
+vim.keymap.set("v", "<leader>pg", [["zy:lua vim.api.nvim_buf_set_text(0, vim.fn.line("'<") - 1, vim.fn.col("'<") - 1, vim.fn.line("'>") - 1, vim.fn.col("'>"), {'fmt.Printf("' .. vim.fn.getreg('z') .. ': %s", ' .. vim.fn.getreg('z') .. ')'})<CR>]], { desc = "[C]ustom copy with [P]ython" })
 
 -- Copy full path
 vim.keymap.set('n', '<leader>cf', function()
