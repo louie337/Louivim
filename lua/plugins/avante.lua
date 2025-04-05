@@ -64,6 +64,9 @@ return {
         file_types = { "markdown", "Avante" },
       },
       ft = { "markdown", "Avante" },
+      keys = {
+        { "<leader>mt", ":RenderMarkdown toggle<cr>", desc = "[M]arkdown [T]oggle" },
+      },
     },
   },
 }
