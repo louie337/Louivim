@@ -54,9 +54,6 @@ local on_attach = function(client, bufnr)
     })
     nmap("<leader>f", vim.lsp.buf.format, "LSP [F]ormat")
 
-    if client.server_capabilities.documentSymbolProvider then
-        require("nvim-navic").attach(client, bufnr)
-    end
 end
 
 -- Enable the following language servers
