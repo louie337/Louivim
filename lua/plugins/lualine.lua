@@ -1,6 +1,6 @@
 return {
--- Set lualine as statusline
-  'nvim-lualine/lualine.nvim',
+  -- Set lualine as statusline
+  "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
   opts = function(plugin)
     local icons = require("options.icons")
@@ -32,8 +32,13 @@ return {
               hint = icons.diagnostics.Hint,
             },
           },
-          { "filetype", icon_only = true, separator = "",                                               padding = { left = 1, right = 0 } },
-          { "filename", path = 1,         symbols = { modified = "  ", readonly = "", unnamed = "" } },
+          {
+            "filetype",
+            icon_only = true,
+            separator = "",
+            padding = { left = 1, right = 0 },
+          },
+          { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
           -- stylua: ignore
         },
         lualine_x = {
@@ -49,7 +54,11 @@ return {
             cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
             color = fg("Constant"),
           },
-          { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = fg("Special") },
+          {
+            require("lazy.status").updates,
+            cond = require("lazy.status").has_updates,
+            color = fg("Special"),
+          },
           {
             "diff",
             symbols = {
