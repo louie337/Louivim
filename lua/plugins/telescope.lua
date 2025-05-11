@@ -3,7 +3,6 @@ return {
   version = "0.1.4",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "kdheepak/lazygit.nvim",
     {
       "nvim-telescope/telescope-fzf-native.nvim",
       -- NOTE: If you are having trouble with this installation,
