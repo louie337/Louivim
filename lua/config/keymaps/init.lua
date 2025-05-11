@@ -7,6 +7,9 @@
 -- Base setup
 vim.keymap.set("n", "<leader>ln", "<CMD>set rnu!<CR>", { desc = "[L]ine [N]number" })
 vim.keymap.set("n", "<leader>nl", "<CMD>nohl<CR>", { desc = "[N]o High[L]ight" })
+vim.keymap.set("n", "<leader>f", function()
+	vim.lsp.buf.format()
+end, { desc = "[F]ormat current buffer" })
 
 -- Better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -63,23 +66,38 @@ vim.keymap.set("n", "yL", "^vg_y", { desc = "[Y]ank [L]ine without newline" })
 vim.keymap.set("n", "dL", "^vg_d", { desc = "[D]elete [L]ine without newline" })
 
 -- Custom keymap scripts
-vim.keymap.set("v", "<leader>pj", [["zy:lua vim.api.nvim_buf_set_text(0, vim.fn.line("'<") - 1, vim.fn.col("'<") - 1, vim.fn.line("'>") - 1, vim.fn.col("'>"), {'console.log("' .. vim.fn.getreg('z') .. '", ' .. vim.fn.getreg('z') .. ')'})<CR>]], { desc = "[C]ustom copy with [J]avaScript" })
-vim.keymap.set("v", "<leader>pp", [["zy:lua vim.api.nvim_buf_set_text(0, vim.fn.line("'<") - 1, vim.fn.col("'<") - 1, vim.fn.line("'>") - 1, vim.fn.col("'>"), {'print("' .. vim.fn.getreg('z') .. '", ' .. vim.fn.getreg('z') .. ')'})<CR>]], { desc = "[C]ustom copy with [P]ython" })
-vim.keymap.set("v", "<leader>pg", [["zy:lua vim.api.nvim_buf_set_text(0, vim.fn.line("'<") - 1, vim.fn.col("'<") - 1, vim.fn.line("'>") - 1, vim.fn.col("'>"), {'fmt.Printf("' .. vim.fn.getreg('z') .. ': %s", ' .. vim.fn.getreg('z') .. ')'})<CR>]], { desc = "[C]ustom copy with [P]ython" })
+vim.keymap.set(
+	"v",
+	"<leader>pj",
+	[["zy:lua vim.api.nvim_buf_set_text(0, vim.fn.line("'<") - 1, vim.fn.col("'<") - 1, vim.fn.line("'>") - 1, vim.fn.col("'>"), {'console.log("' .. vim.fn.getreg('z') .. '", ' .. vim.fn.getreg('z') .. ')'})<CR>]],
+	{ desc = "[C]ustom copy with [J]avaScript" }
+)
+vim.keymap.set(
+	"v",
+	"<leader>pp",
+	[["zy:lua vim.api.nvim_buf_set_text(0, vim.fn.line("'<") - 1, vim.fn.col("'<") - 1, vim.fn.line("'>") - 1, vim.fn.col("'>"), {'print("' .. vim.fn.getreg('z') .. '", ' .. vim.fn.getreg('z') .. ')'})<CR>]],
+	{ desc = "[C]ustom copy with [P]ython" }
+)
+vim.keymap.set(
+	"v",
+	"<leader>pg",
+	[["zy:lua vim.api.nvim_buf_set_text(0, vim.fn.line("'<") - 1, vim.fn.col("'<") - 1, vim.fn.line("'>") - 1, vim.fn.col("'>"), {'fmt.Printf("' .. vim.fn.getreg('z') .. ': %s", ' .. vim.fn.getreg('z') .. ')'})<CR>]],
+	{ desc = "[C]ustom copy with [P]ython" }
+)
 
 -- Copy full path
-vim.keymap.set('n', '<leader>cf', function()
-    local path = vim.fn.expand('%:p')
-    vim.fn.setreg('+', path)
-    vim.notify('Copied: ' .. path)
-end, { desc = '[C]opy [F]ull path to clipboard' })
+vim.keymap.set("n", "<leader>cf", function()
+	local path = vim.fn.expand("%:p")
+	vim.fn.setreg("+", path)
+	vim.notify("Copied: " .. path)
+end, { desc = "[C]opy [F]ull path to clipboard" })
 
 -- Copy relative path
-vim.keymap.set('n', '<leader>cr', function()
-    local rel_path = vim.fn.expand('%')
-    vim.fn.setreg('+', rel_path)
-    vim.notify('Copied: ' .. rel_path)
-end, { desc = '[C]opy [R]elative path to clipboard' })
+vim.keymap.set("n", "<leader>cr", function()
+	local rel_path = vim.fn.expand("%")
+	vim.fn.setreg("+", rel_path)
+	vim.notify("Copied: " .. rel_path)
+end, { desc = "[C]opy [R]elative path to clipboard" })
 
 -- treesitter
 vim.treesitter.language.register("markdown", "mdx")
