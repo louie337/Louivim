@@ -16,5 +16,4 @@ require("config.keymaps")
 require("config.autocmds")
 
 require("lazy").setup("plugins")
-
-require("config.after-plugin")
+require("config.after")
