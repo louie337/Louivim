@@ -2,20 +2,18 @@ return {
   {
     -- NOTES: LSP Server Manager
     "williamboman/mason.nvim",
-  },
-  {
-    -- NOTES: Useful status updates for LSP
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = {
-      "j-hui/fidget.nvim",
-      "folke/neodev.nvim",
-    },
-    opts = {
-      auto_install = true,
-    },
+    config=true,
   },
   {
     -- NOTE: LSP Configuration & Plugins
     "neovim/nvim-lspconfig",
-  },
+    config = function()
+    end,
+    keys = {
+      -- { "gd", function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end, desc = "Goto Definition" },
+      -- { "gr", "<cmd>Telescope lsp_references<cr>", desc = "References", nowait = true },
+      -- { "gI", function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end, desc = "Goto Implementation" },
+      -- { "gy", function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end, desc = "Goto T[y]pe Definition" },
+    }
+  }
 }
