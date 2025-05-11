@@ -66,3 +66,4 @@ cmp.setup({
     },
 })
 
+require("mason-lspconfig").setup()
