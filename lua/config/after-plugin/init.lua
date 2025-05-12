@@ -32,7 +32,8 @@ local on_attach = function(client, bufnr)
     -- nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
     nmap("gI", telescope.lsp_implementations, "[G]oto [I]mplementation")
     nmap("<leader>ds", telescope.lsp_document_symbols, "[D]ocument [S]ymbols")
-    nmap("<leader>ws", telescope.lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+    nmap("<leader>wS", telescope.lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+    nmap("<leader>ws", telescope.lsp_workspace_symbols, "[W]orkspace [S]ymbols")
 
     -- See `:help K` for why this keymap
     nmap("K", vim.lsp.buf.hover, "Hover Documentation")
