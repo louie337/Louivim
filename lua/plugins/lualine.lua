@@ -1,5 +1,4 @@
 return {
-  -- Set lualine as statusline
   "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
   opts = function(plugin)
@@ -89,13 +88,4 @@ return {
       extensions = { "neo-tree" },
     }
   end,
-  -- See `:help lualine.txt`
-  -- opts = {
-  --   options = {
-  --     icons_enabled = false,
-  --     theme = 'tokyonight',
-  --     component_separators = '|',
-  --     section_separators = '',
-  --   },
-  -- },
 }

@@ -1,3 +1,4 @@
+-- NOTE: Add git status into buffers
 local icons = require("options.icons")
 
 return {
