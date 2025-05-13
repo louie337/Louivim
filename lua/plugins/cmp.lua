@@ -1,13 +1,36 @@
 return {
-  -- Autocompletion
-  'hrsh7th/nvim-cmp',
-  dependencies = {
-    'L3MON4D3/LuaSnip',
-    'saadparwaiz1/cmp_luasnip',
-    'rafamadriz/friendly-snippets',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'onsails/lspkind.nvim',
+  "saghen/blink.cmp",
+  dependencies = { "folke/lazydev.nvim", "hrsh7th/nvim-cmp", "rafamadriz/friendly-snippets" },
+  opts = {
+    keymap = {
+      preset = "default",
+      ["<C-space>"] = {},
+      ["<C-n>"] = { "select_next", "show", "fallback_to_mappings" },
+    },
+
+    completion = {
+      keyword = { range = "full" },
+      accept = { auto_brackets = { enabled = false } },
+      menu = {
+        auto_show = true,
+        draw = {
+          columns = {
+            { "label",     "label_description", gap = 4 },
+            { "kind_icon", "kind" },
+          },
+        },
+      },
+      documentation = { auto_show = true },
+      ghost_text = { enabled = true },
+    },
+
+    signature = { enabled = true },
+
+    fuzzy = { implementation = "lua" },
+  },
+
+  sources = {
+    default = { "lsp", "path", "buffer", "lazydev", "friendly-snippets", "snippets" },
+    min_keyword_length = 0,
   },
 }
