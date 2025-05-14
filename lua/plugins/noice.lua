@@ -1,10 +1,11 @@
+-- TODO: Fix Noice message then should be completed
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
   keys = {
-    { "<leader>nd", "<CMD>NoiceDismiss<CR>",   desc = "[N]oice [D]ismiss" },
-    { "<leader>nh", "<CMD>NoiceHistory<CR>",   desc = "[N]oice [H]istory" },
-    { "<leader>nt", "<CMD>NoiceTelescope<CR>", desc = "[N]oice [T]elescope" },
+    { "<leader>nd", "<CMD>NoiceDismiss<CR>", desc = "[N]oice [D]ismiss" },
+    { "<leader>nh", "<CMD>NoiceHistory<CR>", desc = "[N]oice [H]istory" },
+    { "<leader>na", "<CMD>NoiceAll<CR>",     desc = "[N]oice [A]ll" },
   },
   opts = {
     -- add any options here
@@ -26,11 +27,15 @@ return {
     },
     -- you can enable a preset for easier configuration
     presets = {
-      bottom_search = true,      -- use a classic bottom cmdline for search
-      command_palette = true,    -- position the cmdline and popupmenu together
-      long_message_to_split = true, -- long messages will be sent to a split
-      inc_rename = false,        -- enables an input dialog for inc-rename.nvim
-      lsp_doc_border = false,    -- add a border to hover docs and signature help
+      bottom_search = false,      -- use a classic bottom cmdline for search
+      command_palette = false,    -- position the cmdline and popupmenu together
+      long_message_to_split = false, -- long messages will be sent to a split
+      inc_rename = false,         -- enables an input dialog for inc-rename.nvim
+      lsp_doc_border = false,     -- add a border to hover docs and signature help
+    },
+    -- NOTE: Temporarily disable this to get the message working
+    messages = {
+      enabled = false,
     },
   },
   dependencies = {
