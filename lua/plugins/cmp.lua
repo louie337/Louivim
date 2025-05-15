@@ -1,6 +1,6 @@
 return {
   "saghen/blink.cmp",
-  dependencies = { "folke/lazydev.nvim", "hrsh7th/nvim-cmp", "rafamadriz/friendly-snippets" },
+  dependencies = { "folke/lazydev.nvim", "hrsh7th/nvim-cmp" },
   opts = {
     keymap = {
       preset = "default",
@@ -30,7 +30,14 @@ return {
   },
 
   sources = {
-    default = { "lsp", "path", "buffer", "lazydev", "friendly-snippets", "snippets" },
-    min_keyword_length = 0,
+    default = { "lsp", "path", "buffer", "snippets" },
+    providers = {
+      lsp = {
+        score_offset = 1000,
+      },
+      snippets = {
+        score_offset = -100,
+      },
+    },
   },
 }
