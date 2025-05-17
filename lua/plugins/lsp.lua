@@ -17,7 +17,7 @@ return {
     keys = {
       { "gd",         telescope.lsp_definitions,               desc = "[G]o to [D]efinitions" },
       { "gr",         telescope.lsp_references,                desc = "[G]o to [R]eferences" },
-      { "gi",         telescope.lsp_implementations,           desc = "[G]o to [I]mplementation" },
+      { "gI",         telescope.lsp_implementations,           desc = "[G]o to [I]mplementation" },
       { "gD",         telescope.lsp_type_definitions,          desc = "[G]o to Type [D]efinition" },
       { "gx",         telescope.diagnostics,                   desc = "Go to [D]iagnostics" },
       { "<leader>ds", telescope.lsp_document_symbols,          desc = "[D]ocument [S]ymbols" },
