@@ -2,6 +2,7 @@ local dashboard = require("plugins.snacks.dashboard")
 
 return {
   "folke/snacks.nvim",
+  -- enabled=false,
   dependencies = {},
   priority = 1000,
   lazy = false,
@@ -12,7 +13,7 @@ return {
     dashboard = dashboard,
     explorer = { enabled = true },
     indent = { enabled = true },
-    input = { enabled = true },
+    input = { enabled = false },
     picker = { enabled = true },
     notifier = { enabled = false },
     quickfile = { enabled = true },

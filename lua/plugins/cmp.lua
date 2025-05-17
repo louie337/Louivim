@@ -4,7 +4,7 @@ return {
 		"folke/lazydev.nvim",
 		"hrsh7th/nvim-cmp",
 		"Kaiser-Yang/blink-cmp-avante",
-		"rafamadriz/friendly-snippets",
+		-- "rafamadriz/friendly-snippets",
 	},
 	opts = {
 		keymap = {

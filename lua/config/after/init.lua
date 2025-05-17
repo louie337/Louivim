@@ -11,3 +11,7 @@ vim.lsp.config("*", {
 vim.lsp.config("ts_ls", {
 	on_attach = on_attach,
 })
+
+-- NOTE: Avante suggested settings
+vim.opt.laststatus = 3
+
