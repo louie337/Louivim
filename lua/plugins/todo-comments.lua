@@ -22,6 +22,6 @@ return {
     },
   },
   keys = {
-    { "<leader>st", "<cmd>TodoTelescope<cr>", desc = "[S]earch [T]odo" },
+    { "<leader>sT", "<cmd>TodoTelescope<cr>", desc = "[S]earch [T]odo" },
   },
 }
