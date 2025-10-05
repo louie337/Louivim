@@ -11,6 +11,8 @@ return {
         -- NOTE: Lua settings
         null_ls.builtins.formatting.stylua,
 
+        null_ls.builtins.formatting.gofmt,
+
         -- NOTE: Prettier settings
         null_ls.builtins.formatting.prettier.with({
           only_local = "node_modules/.bin",
