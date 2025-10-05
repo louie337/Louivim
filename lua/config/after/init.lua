@@ -12,6 +12,16 @@ vim.lsp.config("ts_ls", {
 	on_attach = on_attach,
 })
 
+vim.lsp.config('ruff', {
+  init_options = {
+    settings = {
+      -- Ruff language server settings go here
+    }
+  }
+})
+
+vim.lsp.enable('ruff')
+
+
 -- NOTE: Avante suggested settings
 vim.opt.laststatus = 3
-
