@@ -58,8 +58,8 @@ return {
     vim.keymap.set(
       "n",
       "<leader>sH",
-      "<CMD>Telescope live_grep hidden=true search=<CR>",
-      { desc = "[S]earch by [G]rep (Hidden files)" }
+      "<CMD>Telescope find_files hidden=true no_ignore=true<CR>",
+      { desc = "[S]earch [H]idden & gitignored files" }
     )
     vim.keymap.set("n", "<leader>sv", builtin.help_tags, { desc = "[S]earch [V]im help tags" })
     vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
